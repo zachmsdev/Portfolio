@@ -1,0 +1,242 @@
+
+// Portfolio SCSS
+ 
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ html {
+     height: 100%;
+     font-size: 62.5%;
+ }
+
+ body {
+     height: 100vh;
+ }
+
+ @mixin bringCenter() {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ $firstColor: #2EC8D1;
+ $secondColor: #438c97;
+ $thirdColor: #0d3444;
+ $boxColor: #D9D9D9;
+
+ .container {
+     width: 75%;
+     max-width: 1440px;
+     height: 100%;
+     background: salmon;
+     margin: 0 auto;
+ }
+
+ // --------------------------------------------- Main Section [HOME PAGE]
+
+ main {
+    width: 100%;
+    height: 70vh;
+    background-color: $firstColor;
+ }
+
+ canvas {
+     width: 100vw;
+ }
+
+ header {
+     width: 100%;
+     height: 8rem;
+     background: white;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 2rem;
+     & ul {
+         display: flex;
+         gap: 3rem;
+     }
+     & ul li {
+        font-family: 'Cinzel', 'Arial';
+        font-weight: 300;
+        list-style-type: none;
+        font-size: 2rem;
+     }
+     & > h3 {
+         font-family: 'Cinzel', 'Arial';
+         font-size: 3.5rem;
+         user-select: none;
+     }
+ }
+
+ a {
+     text-decoration: none;
+     color: inherit;
+ }
+
+  // ---------------------------------- Skill Section
+
+  .skillSection {
+    height: 20vh;
+    width: 100%;
+    background: $secondColor;
+  }
+
+  .flexParent {
+      height: 100%;
+      width: 100%;
+      background: yellow;
+      @include bringCenter();
+      gap: 8rem;
+      & img {
+          max-width: 80%;
+      }
+      & > div {
+          width: 15rem;
+          height: 100%;
+          background: salmon;
+          @include bringCenter();
+      }
+      & div:nth-child(1) img {
+          max-height: 55%;
+      }
+  }
+
+
+  // ---------------------------------- Footer Section
+
+  footer {
+      height: 10vh;
+      width: 100%;
+      background: $thirdColor;
+      @include bringCenter();
+      & div {
+          height: 5em;
+          width: 5em;
+          background-image: url('https://pngimg.com/uploads/github/github_PNG88.png');
+          background-position: center;
+          background-size: cover;
+          @include bringCenter();
+          cursor: pointer;
+          transition: transform 1s ease;
+          &:hover {
+              transform: rotate(360deg);
+          }
+      }
+  }
+
+  // ------------------------------------------ Main Section [Contact Page]
+
+.contactPage {
+    height: 90vh;
+    overflow: hidden;
+    & .formSection {
+        width: 100%;
+        height: 90%;
+        background: black;
+        @include bringCenter();
+    }
+}
+
+.mainForm {
+    height: 450px;
+    width: 350px;
+    background: salmon;
+    & .formTitle {
+        width: 100%;
+        background: yellow;
+        @include bringCenter();
+        padding: 2rem;
+        & > h4 {
+            font-size: 3rem;
+        }
+    }
+    & .theForm {
+        height: 300px;
+        @include bringCenter();
+        flex-direction: column;
+        gap: 2%;
+        font-size: 1.7rem;
+        font-family: 'Arial';
+        & > textarea {
+            resize: none;
+            font-size: 1.5rem;
+        }
+    }
+    & .bottomForm {
+        height: 70px;
+        @include bringCenter();
+        & > button {
+            padding: 0.6em 1.3em;
+            appearance: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+ // ------------------------------------------ Main Section [Projects Page]
+
+ .projectMain {
+     height: 90vh;
+     background: #158494;
+ }
+
+ .projectList {
+     height: 80vh;
+     @include bringCenter();
+     gap: 5rem;
+     & h2 {
+         text-align: center;
+         font-size: 2rem;
+         font-family: 'Arial';
+         padding: 0.7em;
+     }
+     & > div {
+         width: 400px;
+         height: 400px;
+         background: $boxColor;
+         padding: 1em;
+         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+     }
+     & .pictureBG {
+        height: 50%;
+        width: 300px;
+        margin: 0.3em auto 1em;
+        background: yellow;
+     }
+     & .projectDescription {
+        padding: 2%;
+        height: 25%;
+        background: lightgray;
+        color: black;
+        font-size: 1.7rem;
+        text-align: center
+     }
+     & p {
+         @include bringCenter();
+         height: 10%;
+         font-size: 1.5rem;             // FIX THIS :D
+         font-family: 'Arial';
+     }
+ }
+
+ .etchProject > .pictureBG {
+     background: url('../images/etch.PNG');
+     background-position: center;
+     background-size: cover;
+ }
+
+ .rPsProject > .pictureBG {
+    background: url('../images/rPs.PNG');
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+  // ---------------------------------- Media Queries
+  
