@@ -10,10 +10,12 @@
  html {
      height: 100%;
      font-size: 62.5%;
+     overflow: hidden;
  }
 
  body {
      height: 100vh;
+     overflow: hidden;
  }
 
  @mixin bringCenter() {
@@ -25,7 +27,7 @@
  $firstColor: #2EC8D1;
  $secondColor: #438c97;
  $thirdColor: #0d3444;
- $boxColor: #D9D9D9;
+ $boxColor: #474747;
 
  .container {
      width: 75%;
@@ -41,10 +43,24 @@
     width: 100%;
     height: 70vh;
     background-color: $firstColor;
+    background: url(https://images.unsplash.com/photo-1573530256504-79487d8427fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+    background-position: top;
+    background-size: cover;
  }
 
- canvas {
-     width: 100vw;
+ .mainContainer {
+     & .mainText {
+         text-align: right;
+         font-family: monospace;
+         line-height: 1.5;
+         font-size: 3.3rem;
+         margin-top: 3em;
+         & > span {
+            font-family: 'Cinzel', 'Arial';
+            font-weight: 600;
+            color: $thirdColor;
+         }
+     }
  }
 
  header {
@@ -55,6 +71,7 @@
      align-items: center;
      justify-content: space-between;
      padding: 0 2rem;
+     border-bottom: 1px solid black;
      & ul {
          display: flex;
          gap: 3rem;
@@ -64,12 +81,20 @@
         font-weight: 300;
         list-style-type: none;
         font-size: 2rem;
+        transition: transform 0.3s ease;
+        &:hover {
+            transform: translateY(-5px);
+        }
      }
      & > h3 {
          font-family: 'Cinzel', 'Arial';
-         font-size: 3.5rem;
+         font-size: 3.2rem;
          user-select: none;
      }
+ }
+
+ .projectHead {
+     border-bottom: 1px solid black;
  }
 
  a {
@@ -92,7 +117,7 @@
       @include bringCenter();
       gap: 8rem;
       & img {
-          max-width: 80%;
+          max-width: 70%;
       }
       & > div {
           width: 15rem;
@@ -101,7 +126,7 @@
           @include bringCenter();
       }
       & div:nth-child(1) img {
-          max-height: 55%;
+          max-height: 45%;
       }
   }
 
@@ -144,14 +169,18 @@
 .mainForm {
     height: 450px;
     width: 350px;
-    background: salmon;
+    background: whitesmoke;
+    box-shadow: 1rem 1rem 0rem #181818;
     & .formTitle {
         width: 100%;
-        background: yellow;
+        background: black;
+        margin-bottom: 1.5em;
         @include bringCenter();
-        padding: 2rem;
+        padding: 1.5rem;
         & > h4 {
             font-size: 3rem;
+            color: white;
+            font-family: 'Cinzel', 'Arial';
         }
     }
     & .theForm {
@@ -182,7 +211,7 @@
 
  .projectMain {
      height: 90vh;
-     background: #158494;
+     background: #3c8893;
  }
 
  .projectList {
@@ -190,37 +219,51 @@
      @include bringCenter();
      gap: 5rem;
      & h2 {
+         user-select: none;
          text-align: center;
-         font-size: 2rem;
-         font-family: 'Arial';
-         padding: 0.7em;
+         font-size: 2.5rem;
+         font-family: 'Cinzel';
+         padding: 0.4em;
+         color: white;
+         background: black;
+         border-top-left-radius: 2rem;
+         border-top-right-radius: 2rem;
+         margin-bottom: 0.5em;
      }
      & > div {
          width: 400px;
-         height: 400px;
+         height: 425px;
          background: $boxColor;
-         padding: 1em;
+         border-radius: 2em;
          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
      }
      & .pictureBG {
-        height: 50%;
-        width: 300px;
+        height: 44%;
+        width: 280px;
         margin: 0.3em auto 1em;
+        border-radius: 1em;
+        border: 1px solid black;
         background: yellow;
      }
      & .projectDescription {
         padding: 2%;
-        height: 25%;
-        background: lightgray;
-        color: black;
+        height: 23%;
+        color: white;
         font-size: 1.7rem;
-        text-align: center
+        text-align: center;
+        font-family: 'Arial';
      }
      & p {
          @include bringCenter();
          height: 10%;
-         font-size: 1.5rem;             // FIX THIS :D
-         font-family: 'Arial';
+         font-size: 1.5rem;
+         font-family: 'Cinzel';
+     }
+     & .projectLinks {
+         padding: 0.7em;
+         border-radius: 0.5em;
+         background: black;
+         color: white;
      }
  }
 
