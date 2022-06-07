@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -39,6 +39,10 @@ main {
   line-height: 1.5;
   font-size: 3.3rem;
   margin-top: 3em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .mainContainer .mainText > span {
@@ -129,6 +133,7 @@ a {
 
 .flexParent img {
   max-width: 70%;
+  min-width: 85px;
 }
 
 .flexParent > div {
@@ -383,5 +388,174 @@ footer div:hover {
   background: url("../images/rPs.PNG");
   background-position: center;
   background-size: cover;
+}
+
+@media only screen and (max-width: 87.5em) {
+  html {
+    font-size: 58.5%;
+  }
+  .container {
+    width: 80%;
+  }
+  .flexParent {
+    gap: 5em;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  html {
+    font-size: 55.5%;
+  }
+  .container {
+    width: 90%;
+  }
+  .flexParent {
+    gap: 2em;
+  }
+  .projectList {
+    gap: 3rem;
+  }
+  .projectList > div {
+    height: 400px;
+    width: 375px;
+  }
+}
+
+@media only screen and (max-width: 42.188em) {
+  .flexParent {
+    gap: 0em;
+  }
+  .flexParent img {
+    min-width: 68px;
+  }
+}
+
+@media only screen and (max-width: 38.438em) {
+  main {
+    height: 55vh;
+    position: relative;
+  }
+  main > .menuOverlay {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0.5;
+    display: none;
+  }
+  .skillSection {
+    height: 35vh;
+  }
+  .flexParent {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .flexParent > div {
+    height: initial;
+    width: 15.59rem;
+  }
+  .flexParent div:nth-child(1) img {
+    max-width: 60%;
+  }
+  .flexParent div:nth-child(6) img {
+    max-width: 57%;
+  }
+  header ul {
+    display: none;
+  }
+  header .burgerIcon {
+    width: 35px;
+    height: 23px;
+    background: yellow;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  header .burgerIcon > div:nth-child(2) {
+    width: 100%;
+    height: 3px;
+    background: black;
+  }
+  header .burgerIcon > .topBun {
+    width: 100%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    top: 0;
+  }
+  header .burgerIcon > .bottomBun {
+    width: 100%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+  }
+  .mobileMenu {
+    height: 23rem;
+    width: 15rem;
+    background: #0d3444;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+    z-index: 2;
+    display: none;
+    -webkit-box-shadow: inset 0 0 4px;
+            box-shadow: inset 0 0 4px;
+  }
+  .mobileMenu > a {
+    font-size: 2.8rem;
+    color: white;
+  }
+  .mobileMenu.active, .menuOverlay.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .projectList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projectList > div {
+    height: 350px;
+    width: 315px;
+  }
+  .projectList .projectDescription {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 34.375em) and (max-height: 59.063em) {
+  html, body {
+    overflow: scroll;
+  }
+  .projectMain {
+    height: 100vh;
+  }
+  .projectList {
+    height: 90vh;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
