@@ -198,6 +198,7 @@ footer div:hover {
 }
 
 .contactPage {
+  min-height: 620px;
   height: 90vh;
   overflow: hidden;
 }
@@ -218,7 +219,7 @@ footer div:hover {
 
 .mainForm {
   height: 450px;
-  width: 350px;
+  width: 340px;
   background: whitesmoke;
   -webkit-box-shadow: 1rem 1rem 0rem #181818;
           box-shadow: 1rem 1rem 0rem #181818;
@@ -339,7 +340,7 @@ footer div:hover {
 
 .projectList .pictureBG {
   height: 44%;
-  width: 280px;
+  width: 75%;
   margin: 0.3em auto 1em;
   border-radius: 1em;
   border: 1px solid black;
@@ -467,8 +468,8 @@ footer div:hover {
     display: none;
   }
   header .burgerIcon {
-    width: 35px;
-    height: 23px;
+    width: 29px;
+    height: 19px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -558,7 +559,11 @@ footer div:hover {
     padding: 1em;
   }
   .mainForm {
-    width: 330px;
+    width: 300px;
+    height: 440px;
+  }
+  .mainForm .formTitle {
+    margin-bottom: 0.7em;
   }
 }
 
@@ -606,6 +611,57 @@ footer div:hover {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+  }
+}
+
+@media only screen and (max-width: 38.438em) and (max-height: 39.375em) {
+  footer {
+    padding: 4em;
+  }
+}
+
+@media only screen and (min-width: 38.438em) and (max-height: 48.125em) {
+  body {
+    overflow: auto;
+  }
+  .skillSection {
+    padding: 7em;
+  }
+  .flexParent div:nth-child(1) img {
+    max-height: 71px;
+  }
+  .mainContainer .mainText {
+    font-size: calc(1.5rem + 1.7vh);
+  }
+  footer {
+    padding: 3em;
+  }
+}
+
+@media only screen and (min-width: 38.438em) and (max-height: 39.375em) {
+  html {
+    font-size: 53.5%;
+  }
+  .projectMain {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .projectList {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10em;
+  }
+  .projectList > div {
+    width: 350px;
+    height: 369px;
+  }
+  .contactPage {
+    min-height: 620px;
+  }
+  footer {
+    padding: 4em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
