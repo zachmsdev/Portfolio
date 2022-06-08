@@ -10,7 +10,6 @@
  html {
      height: 100%;
      font-size: 62.5%;
-     overflow: hidden;
  }
 
  body {
@@ -33,7 +32,6 @@
      width: 75%;
      max-width: 1440px;
      height: 100%;
-     background: salmon;
      margin: 0 auto;
  }
 
@@ -42,10 +40,11 @@
  main {
     width: 100%;
     height: 70vh;
-    background-color: $firstColor;
-    background: url(https://images.unsplash.com/photo-1573530256504-79487d8427fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+    background-color: $firstColor;             // Fallback JPG background because SAFARI :[
+    background-image: url(../images/background.avif), url(../images/background.jpg);
     background-position: top;
     background-size: cover;
+    background-repeat: no-repeat;
  }
 
  .mainContainer {
@@ -67,7 +66,6 @@
  header {
      width: 100%;
      height: 8rem;
-     background: white;
      display: flex;
      align-items: center;
      justify-content: space-between;
@@ -103,6 +101,10 @@
      color: inherit;
  }
 
+ .mobileMenu {
+    display: none;
+}
+
   // ---------------------------------- Skill Section
 
   .skillSection {
@@ -114,7 +116,6 @@
   .flexParent {
       height: 100%;
       width: 100%;
-      background: yellow;
       @include bringCenter();
       gap: 8rem;
       & img {
@@ -124,14 +125,12 @@
       & > div {
           width: 15rem;
           height: 100%;
-          background: salmon;
           @include bringCenter();
       }
       & div:nth-child(1) img {
           max-height: 45%;
       }
   }
-
 
   // ---------------------------------- Footer Section
 
@@ -143,7 +142,7 @@
       & div {
           height: 5em;
           width: 5em;
-          background-image: url('https://pngimg.com/uploads/github/github_PNG88.png');
+          background-image: url(../images/githubIcon.png);
           background-position: center;
           background-size: cover;
           @include bringCenter();
@@ -163,7 +162,6 @@
     & .formSection {
         width: 100%;
         height: 90%;
-        background: black;
         @include bringCenter();
     }
 }
@@ -198,7 +196,7 @@
         }
     }
     & .bottomForm {
-        height: 70px;
+        height: 50px;
         @include bringCenter();
         & > button {
             padding: 0.6em 1.3em;
@@ -245,15 +243,14 @@
         margin: 0.3em auto 1em;
         border-radius: 1em;
         border: 1px solid black;
-        background: yellow;
      }
      & .projectDescription {
         padding: 2%;
         height: 23%;
         color: white;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
         text-align: center;
-        font-family: 'Arial';
+        font-family: 'Times New Roman';
      }
      & p {
          @include bringCenter();
@@ -283,7 +280,7 @@
 
 
 
-  // ---------------------------------- @ Media Queries
+  // ---------------------------------- Media Queries (widths)
   
   @media only screen and (max-width: 87.5em) {
     html {
@@ -340,6 +337,9 @@
             display: none;
         }
     }
+    .mainContainer .mainText {
+        font-size: 2.8rem;
+    }
     .skillSection {
         height: 35vh;
     }
@@ -364,7 +364,6 @@
         & .burgerIcon {
             width: 35px;
             height: 23px;
-            background: yellow;
             display: flex;
             align-items: center;
             position: relative;
@@ -390,7 +389,6 @@
             }
         }
     }
-
     .mobileMenu {
         height: 23rem;
         width: 15rem;
@@ -409,13 +407,12 @@
             color: white;
         }
     }
-
     .mobileMenu.active, .menuOverlay.active {
         display: flex;
     }
-
     .projectList {
         flex-direction: column;
+        padding: 5em;
         & > div {
             height: 350px;
             width: 315px;
@@ -423,18 +420,66 @@
         & .projectDescription {
             font-size: 1.6rem;
         }
+        & .pictureBG {
+            width: 215px;
+            height: 40%;
+        }
+        & p {
+            font-size: 1.2rem;
+            height: 13%;
+        }
+        & .projectLinks {
+            padding: 1em;
+        }
     }
-    
+    .mainForm {
+        width: 330px;
+    }
 }
 
-@media only screen and (max-width: 34.375em) and (max-height: 59.063em) {
-    html, body {
-        overflow: scroll;
+@media only screen and (max-width: 28.813em) {      // 461 PX [Mobile] 
+    main {
+        height: 50vh;
     }
-    .projectMain {
-        height: 100vh;
+    .skillSection {
+        height: 40vh;
     }
-    .projectList {
-        height: 90vh;
+    .flexParent {
+        & img {
+            max-width: 58%;
+        }
+        & div:nth-child(1) img,
+        & div:nth-child(6) img {
+            max-width: 50%;
+        }
     }
 }
+
+@media only screen and (max-width: 19.188em) {      // 307px or below, NOT SUPPORTED
+    html {
+        background: black;
+    }
+    body { 
+        display: none;
+    }
+}
+
+  // ---------------------------------- Media Queries (heights)
+
+  @media only screen and (max-width: 38.438em) and (max-height: 53.750em) {     // Max-width: 615px, max-height: 860px
+    body {
+        overflow: auto;
+    }
+    main {
+        min-height: 430px;
+    }
+    .skillSection {
+        min-height: 230px;
+    }
+    .projectMain {
+        height: fit-content;
+    }
+    .projectList {
+        height: fit-content;
+    }
+  }
