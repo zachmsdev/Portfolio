@@ -42,6 +42,15 @@ main {
   position: absolute;
   left: 0;
   bottom: 0;
+  -webkit-transition: -webkit-transform 3s ease;
+  transition: -webkit-transform 3s ease;
+  transition: transform 3s ease;
+  transition: transform 3s ease, -webkit-transform 3s ease;
+}
+
+.move {
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
 }
 
 .mainContainer .mainText {
@@ -54,6 +63,10 @@ main {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-animation: fadeIn 1s ease-in;
+          animation: fadeIn 1s ease-in;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .mainContainer .mainText > span {
@@ -385,6 +398,15 @@ footer div:hover {
   border-radius: 0.5em;
   background: black;
   color: white;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.projectList .projectLinks:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .etchProject > .pictureBG {
@@ -399,9 +421,35 @@ footer div:hover {
   background-size: cover;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @media only screen and (min-width: 84.375em) {
   #wave {
-    max-height: 100px;
+    max-height: 85px;
   }
 }
 
@@ -624,7 +672,7 @@ footer div:hover {
 
 @media only screen and (max-width: 38.438em) and (max-height: 53.75em) {
   body {
-    overflow: auto;
+    overflow-y: auto;
   }
   main {
     min-height: 430px;

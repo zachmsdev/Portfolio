@@ -57,6 +57,11 @@
      position: absolute;
      left: 0;
      bottom: 0;
+     transition: transform 3s ease;
+ }
+
+ .move {
+     transform: translateY(-5rem);
  }
 
  .mainContainer {
@@ -67,6 +72,8 @@
          font-size: 3.3rem;
          margin-top: 3em;
          user-select: none;
+         animation: fadeIn 1s ease-in;
+         animation-iteration-count: 1;
          & > span {
             font-family: 'Cinzel', 'Arial';
             font-weight: 600;
@@ -274,6 +281,10 @@
          border-radius: 0.5em;
          background: black;
          color: white;
+         transition: transform 0.3s ease;
+         &:hover {
+            transform: scale(1.05);
+         }
      }
  }
 
@@ -289,13 +300,23 @@
     background-size: cover;
 }
 
+@keyframes fadeIn {
+    from {
+        transform: translateX(-5rem);
+        opacity: 0;
+    } 
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 
   // ---------------------------------- Media Queries (widths) [Built Desktop First]
 
   @media only screen and (min-width: 84.375em) {    // Shrink wave on big screens
     #wave {
-        max-height: 100px;
+        max-height: 85px;
     }
   }
   
@@ -499,7 +520,7 @@
 
   @media only screen and (max-width: 38.438em) and (max-height: 53.750em) {     // Max-width: 615px, max-height: 860px
     body {
-        overflow: auto;
+        overflow-y: auto;
     }
     main {
         min-height: 430px;
