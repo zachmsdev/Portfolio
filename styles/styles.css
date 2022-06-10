@@ -22,6 +22,10 @@ body {
   margin: 0 auto;
 }
 
+.mobileMenu {
+  display: none;
+}
+
 main {
   width: 100%;
   height: 70vh;
@@ -30,6 +34,14 @@ main {
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+#wave {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .mainContainer .mainText {
@@ -107,14 +119,12 @@ a {
   color: inherit;
 }
 
-.mobileMenu {
-  display: none;
-}
-
 .skillSection {
   height: 20vh;
   width: 100%;
   background: #438c97;
+  position: relative;
+  padding-bottom: 1.5rem;
 }
 
 .flexParent {
@@ -133,7 +143,7 @@ a {
 }
 
 .flexParent img {
-  max-width: 70%;
+  max-width: 80%;
   min-width: 85px;
 }
 
@@ -152,7 +162,7 @@ a {
 }
 
 .flexParent div:nth-child(1) img {
-  max-height: 45%;
+  max-height: 59%;
 }
 
 footer {
@@ -389,6 +399,12 @@ footer div:hover {
   background-size: cover;
 }
 
+@media only screen and (min-width: 84.375em) {
+  #wave {
+    max-height: 100px;
+  }
+}
+
 @media only screen and (max-width: 87.5em) {
   html {
     font-size: 58.5%;
@@ -458,6 +474,9 @@ footer div:hover {
     height: initial;
     width: 15.59rem;
   }
+  .flexParent img {
+    max-width: 69%;
+  }
   .flexParent div:nth-child(1) img {
     max-width: 60%;
   }
@@ -503,8 +522,9 @@ footer div:hover {
     width: 15rem;
     background: #0d3444;
     position: absolute;
-    top: 0;
+    top: -23rem;
     right: 0;
+    border-bottom-left-radius: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -520,15 +540,25 @@ footer div:hover {
             flex-direction: column;
     gap: 2em;
     z-index: 2;
-    display: none;
     -webkit-box-shadow: inset 0 0 4px;
             box-shadow: inset 0 0 4px;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   }
   .mobileMenu > a {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
     color: white;
   }
-  .mobileMenu.active, .menuOverlay.active {
+  .mobileMenu.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateY(23rem);
+            transform: translateY(23rem);
+  }
+  .menuOverlay.active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -600,7 +630,7 @@ footer div:hover {
     min-height: 430px;
   }
   .skillSection {
-    min-height: 230px;
+    min-height: 300px;
   }
   .projectMain {
     height: -webkit-fit-content;
@@ -621,17 +651,12 @@ footer div:hover {
 }
 
 @media only screen and (min-width: 38.438em) and (max-height: 48.125em) {
-  body {
-    overflow: auto;
-  }
   .skillSection {
-    padding: 7em;
+    min-height: 166px;
+    padding: 4em;
   }
   .flexParent div:nth-child(1) img {
-    max-height: 71px;
-  }
-  .mainContainer .mainText {
-    font-size: calc(1.5rem + 1.7vh);
+    max-height: 90px;
   }
   footer {
     padding: 3em;
@@ -662,6 +687,15 @@ footer div:hover {
   }
   footer {
     padding: 4em;
+  }
+}
+
+@media only screen and (min-width: 38.438em) and (max-height: 56.25em) {
+  body {
+    overflow-y: auto;
+  }
+  main {
+    min-height: 630px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
