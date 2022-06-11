@@ -185,9 +185,10 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
-footer div {
+footer a {
   height: 5em;
   width: 5em;
   background-image: url(../images/githubIcon.png);
@@ -209,7 +210,7 @@ footer div {
   transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
-footer div:hover {
+footer a:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
