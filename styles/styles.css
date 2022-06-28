@@ -38,10 +38,11 @@ main {
 }
 
 #wave {
-  width: 100vw;
+  width: 100%;
   position: absolute;
   left: 0;
   bottom: 0;
+  right: 0;
   -webkit-transition: -webkit-transform 3s ease;
   transition: -webkit-transform 3s ease;
   transition: transform 3s ease;
@@ -170,7 +171,11 @@ a {
 }
 
 .flexParent div:nth-child(1) img {
-  max-height: 59%;
+  max-height: 53%;
+}
+
+.flexParent div:nth-child(6) img {
+  max-height: 80px;
 }
 
 footer {
@@ -562,6 +567,7 @@ footer a:hover {
   }
   .mainContainer .mainText {
     font-size: 2.8rem;
+    text-align: center;
   }
   .skillSection {
     height: 35vh;
@@ -771,7 +777,7 @@ footer a:hover {
     font-size: 3rem;
   }
   .flexParent div:nth-child(1) img {
-    max-height: 90px;
+    max-height: 85px;
   }
   footer {
     padding: 3em;
