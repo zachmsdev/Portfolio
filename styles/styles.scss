@@ -14,7 +14,8 @@
 
  body {
      min-height: 100vh;
-     overflow: hidden;
+     overflow-x: hidden;
+     scroll-behavior: smooth;
  }
 
  @mixin bringCenter() {
@@ -184,7 +185,8 @@
     height: 450px;
     width: 340px;
     background: whitesmoke;
-    box-shadow: 1rem 1rem 0rem #181818;
+    animation: contactForm 0.75s ease-in;
+    animation-fill-mode: forwards;
     & .formTitle {
         width: 100%;
         background: black;
@@ -235,14 +237,15 @@
  // ------------------------------------------ Main Section [Projects Page]
 
  .projectMain {
-     height: 90vh;
+     height: fit-content;
      background: #3c8893;
  }
 
- .projectList {
-     height: 80vh;
+ .firstProjectList, .secondProjectList {
+     height: fit-content;
      @include bringCenter();
      gap: 5rem;
+     margin: 4rem 0rem;
      & h2 {
          user-select: none;
          text-align: center;
@@ -295,6 +298,17 @@
      }
  }
 
+ .secondProjectList {
+    margin-bottom: 0rem;
+    padding-bottom: 3rem;
+ }
+
+ .bbSearch > .pictureBG {
+     background: url('../images/breakingBadAPI.PNG');
+     background-position: center;
+     background-size: cover;
+ }
+
  .etchProject > .pictureBG {
      background: url('../images/etch.PNG');
      background-position: center;
@@ -315,6 +329,15 @@
     to {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+@keyframes contactForm {
+    from {
+        box-shadow: 0rem;
+    }
+    to {
+        box-shadow: 1rem 1rem 0rem #181818;
     }
 }
 
@@ -349,8 +372,11 @@
     .flexParent {
         gap: 2em;
     }
-    .projectList {
+    .firstProjectList, .secondProjectList {
         gap: 3rem;
+        & h2 {
+            font-size: 2.3rem;
+        }
         & > div {
             height: 400px;
             width: 375px;
@@ -465,9 +491,8 @@
         display: flex;
     }
 
-    .projectList {
+    .firstProjectList, .secondProjectList {
         flex-direction: column;
-        padding: 5em;
         & > div {
             height: 350px;
             width: 315px;
@@ -497,6 +522,12 @@
             height: 68px;
         }
     }
+    .firstProjectList {
+        margin-bottom: 3rem;
+    }
+    .secondProjectList {
+        margin-top: 3rem;
+    }
 }
 
 @media only screen and (max-width: 28.813em) {      // 461 PX [Mobile] 
@@ -517,6 +548,15 @@
     }
 }
 
+@media only screen and (max-width: 20.313em) {      // 325px or below
+    .firstProjectList, .secondProjectList {
+        & > div {
+            width: 290px;
+        }
+    }
+}
+
+
 @media only screen and (max-width: 19.188em) {      // 307px or below, not supported
     html {
         background: black;
@@ -529,9 +569,6 @@
   // ---------------------------------- Media Queries (heights)
 
   @media only screen and (max-width: 38.438em) and (max-height: 53.750em) {     // Max-width: 615px, max-height: 860px
-    body {
-        overflow-y: auto;
-    }
     main {
         min-height: 430px;
     }
@@ -539,9 +576,6 @@
         min-height: 300px;
     }
     .projectMain {
-        height: fit-content;
-    }
-    .projectList {
         height: fit-content;
     }
   }
@@ -555,9 +589,16 @@
   // ------> Mobile Small Heights ABOVE, Tablet/Desktop Small Heights BELOW
 
   @media only screen and (min-width: 38.438em) and (max-height: 48.125em) {     // Min-width: 615px, max-height: 770px
+    .indexMain {
+        height: fit-content;
+        padding-bottom: 35rem;
+    }
     .skillSection {
         min-height: 166px;
         padding: 4em;
+    }
+    .mainContainer .mainText {
+        font-size: 3rem;
     }
     .flexParent div:nth-child(1) img {
         max-height: 90px;
@@ -568,15 +609,10 @@
   }
 
   @media only screen and (min-width: 38.438em) and (max-height: 39.375em) {     // Min-width: 615px, max-height: 630px
-    // html {
-    //     font-size: 53.5%;
-    // }
     .projectMain {
         height: fit-content;
     }
-    .projectList {
-        height: fit-content;
-        padding: 10em;
+    .firstProjectList, .secondProjectList {
         & > div {
             width: 350px;
             height: 369px;
@@ -591,12 +627,6 @@
   }
 
   @media only screen and (min-width: 38.438em) and (max-height: 56.250em) {
-    html {
-        font-size: 57.5%;
-    }
-    body {
-        overflow-y: auto;
-    }
     #wave {
         max-height: 65px;
     }
