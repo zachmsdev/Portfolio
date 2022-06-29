@@ -171,11 +171,11 @@ a {
 }
 
 .flexParent div:nth-child(1) img {
-  max-height: 53%;
+  max-width: 70%;
 }
 
 .flexParent div:nth-child(6) img {
-  max-height: 80px;
+  max-width: 60%;
 }
 
 footer {
@@ -529,6 +529,9 @@ footer a:hover {
   .flexParent {
     gap: 2em;
   }
+  .flexParent img {
+    min-width: 70px;
+  }
   .firstProjectList, .secondProjectList {
     gap: 3rem;
   }
@@ -581,13 +584,13 @@ footer a:hover {
     width: 15.59rem;
   }
   .flexParent img {
-    max-width: 69%;
+    max-width: 64%;
   }
   .flexParent div:nth-child(1) img {
-    max-width: 60%;
+    max-width: 53%;
   }
   .flexParent div:nth-child(6) img {
-    max-width: 57%;
+    max-width: 50%;
   }
   header ul {
     display: none;
@@ -721,10 +724,6 @@ footer a:hover {
   .flexParent img {
     max-width: 58%;
   }
-  .flexParent div:nth-child(1) img,
-  .flexParent div:nth-child(6) img {
-    max-width: 50%;
-  }
 }
 
 @media only screen and (max-width: 20.313em) {
@@ -775,9 +774,6 @@ footer a:hover {
   }
   .mainContainer .mainText {
     font-size: 3rem;
-  }
-  .flexParent div:nth-child(1) img {
-    max-height: 85px;
   }
   footer {
     padding: 3em;

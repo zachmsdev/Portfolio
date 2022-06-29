@@ -142,10 +142,10 @@
           @include bringCenter();
       }
       & div:nth-child(1) img {
-          max-height: 53%;
+          max-width: 70%;
       }
       & div:nth-child(6) img {
-        max-height: 80px;
+        max-width: 60%;
     }
   }
 
@@ -375,6 +375,9 @@
     }
     .flexParent {
         gap: 2em;
+        & img {
+            min-width: 70px;
+        }
     }
     .firstProjectList, .secondProjectList {
         gap: 3rem;
@@ -426,13 +429,13 @@
             width: 15.59rem; 
         }
         img {
-            max-width: 69%;
+            max-width: 64%;
         }
         & div:nth-child(1) img {
-            max-width: 60%;
+            max-width: 53%;
         }
         & div:nth-child(6) img {
-            max-width: 57%;
+            max-width: 50%;
         }
     }
 
@@ -546,10 +549,10 @@
         & img {
             max-width: 58%;
         }
-        & div:nth-child(1) img,
-        & div:nth-child(6) img {
-            max-width: 50%;
-        }
+        // & div:nth-child(1) img,
+        // & div:nth-child(6) img {
+        //     max-width: 50%;
+        // }
     }
 }
 
@@ -605,9 +608,9 @@
     .mainContainer .mainText {
         font-size: 3rem;
     }
-    .flexParent div:nth-child(1) img {
-        max-height: 85px;
-    }
+    // .flexParent div:nth-child(1) img {
+    //     max-height: 85px;
+    // }
     footer {
         padding: 3em;
     }
