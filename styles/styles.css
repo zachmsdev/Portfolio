@@ -53,7 +53,7 @@ main {
   text-align: right;
   font-family: monospace;
   line-height: 1.5;
-  font-size: 3rem;
+  font-size: 2.9rem;
   margin-top: 3em;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -172,10 +172,12 @@ a {
 
 .flexParent div:nth-child(1) img {
   max-width: 70%;
+  min-width: 68px;
 }
 
 .flexParent div:nth-child(6) img {
   max-width: 60%;
+  min-width: 60px;
 }
 
 footer {
@@ -590,7 +592,7 @@ footer a:hover {
     max-width: 53%;
   }
   .flexParent div:nth-child(6) img {
-    max-width: 50%;
+    max-width: 48%;
   }
   header ul {
     display: none;
@@ -771,9 +773,6 @@ footer a:hover {
   .skillSection {
     min-height: 166px;
     padding: 4em;
-  }
-  .mainContainer .mainText {
-    font-size: 3rem;
   }
   footer {
     padding: 3em;
