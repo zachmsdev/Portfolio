@@ -237,6 +237,8 @@
      bottom: 0;
      right: 0;
      transition: transform 3s ease;
+     max-height: 4.6rem;
+     animation: moveWaveDown 1.15s ease-in-out;
  }
 
  .mainContainer {
@@ -277,6 +279,9 @@
         transition: transform 0.3s ease;
         &:hover {
             transform: translateY(-5px);
+        }
+        &.active {
+            font-weight: 700;
         }
      }
      & > h3 {
@@ -326,6 +331,14 @@
       & div:nth-child(6) img {
         max-width: 60%;
         min-width: 60px;
+    }
+  }
+
+  @keyframes moveWaveDown {
+    from {
+        max-height: 115px;
+    } to {
+        max-height: 46px;
     }
   }
 
@@ -402,17 +415,19 @@
         height: 62px;
         @include bringCenter();
         & > button {
-            padding: 0.7em 1.6em;
+            padding: 0.6em 1.6em;
             font-family: 'Arial';
             appearance: none;
             border: none;
             cursor: pointer;
             background: black;
             color: white;
-            transition: padding 0.25s ease;
+            transition: box-shadow 0.3s ease, padding 0.2s ease;
             border-radius: 0.4em;
+            box-shadow: inset 0 0px 0 0 #55b7e3;
             &:hover {
-                padding: 0.9em 1.7em;
+                box-shadow: inset 0px 50px 0 0 #0D3444;
+                padding: 0.7em 1.8em;
             }
         }
     }
@@ -527,12 +542,6 @@
 
 
   // ---------------------------------- Media Queries (widths) [Built Desktop First]
-
-  @media only screen and (min-width: 84.375em) {    // Shrink wave on big screens
-    #wave {
-        max-height: 85px;
-    }
-  }
   
   @media only screen and (max-width: 87.5em) {
     html {
@@ -805,11 +814,5 @@
     }
     footer {
         padding: 4em;
-    }
-  }
-
-  @media only screen and (min-width: 38.438em) and (max-height: 56.250em) {
-    #wave {
-        max-height: 65px;
     }
   }
