@@ -12,6 +12,7 @@ html {
 
 body {
   min-height: 100vh;
+  font-size: 1.6rem;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -443,37 +444,60 @@ a {
   color: inherit;
 }
 
+@-webkit-keyframes moveBG {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: center;
+  }
+}
+
+@keyframes moveBG {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: center;
+  }
+}
+
 .skillSection {
-  height: 20vh;
+  height: auto;
   width: 100%;
   background: #438c97;
   position: relative;
-  padding-bottom: 1.5rem;
+  padding: 4rem 3rem;
 }
 
-.flexParent {
-  height: 100%;
+.skillSection > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skillSection .skills {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.flexParent img {
-  max-width: 80%;
-  min-width: 85px;
-}
-
-.flexParent > div {
-  width: 15rem;
-  height: 100%;
+.skillSection .skills > div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 12.4rem;
+          flex: 0 0 12.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,14 +509,29 @@ a {
           align-items: center;
 }
 
-.flexParent div:nth-child(1) img {
-  max-width: 70%;
-  min-width: 68px;
+.skillSection .skills > div img {
+  max-width: 100%;
+  height: 100%;
 }
 
-.flexParent div:nth-child(6) img {
-  max-width: 60%;
-  min-width: 60px;
+.skillSection .skills > div:nth-child(1) img {
+  max-width: 10.75rem;
+}
+
+.skillSection .skills > div:nth-child(3) img {
+  max-width: 10.75rem;
+}
+
+.skillSection .skills > div:nth-child(4) img {
+  max-width: 10.75rem;
+}
+
+.skillSection .skills > div:nth-child(5) {
+  max-width: 13rem;
+}
+
+.skillSection .skills > div:nth-child(6) img {
+  max-width: 9.5rem;
 }
 
 @-webkit-keyframes moveWaveDown {
@@ -514,7 +553,7 @@ a {
 }
 
 footer {
-  height: 10vh;
+  height: 8rem;
   width: 100%;
   background: #0d3444;
   display: -webkit-box;
@@ -530,8 +569,8 @@ footer {
 }
 
 footer a {
-  height: 5em;
-  width: 5em;
+  height: 5rem;
+  width: 5rem;
   background-image: url(../images/githubIcon.png);
   background-position: center;
   background-size: cover;
@@ -843,9 +882,6 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 87.5em) {
-  html {
-    font-size: 58.5%;
-  }
   .container {
     width: 80%;
   }
@@ -854,10 +890,45 @@ footer a:hover {
   }
 }
 
-@media only screen and (max-width: 62.5em) {
-  html {
-    font-size: 55.5%;
+@media only screen and (max-width: 80rem) {
+  .skillSection .skills {
+    gap: 6rem;
   }
+  .skillSection .skills > div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 11.4rem;
+            flex: 0 0 11.4rem;
+  }
+  .skillSection .skills div:nth-child(1) img {
+    max-width: 9.75rem;
+  }
+  .skillSection .skills div:nth-child(3) img {
+    max-width: 9.75rem;
+  }
+  .skillSection .skills div:nth-child(4) img {
+    max-width: 9.75rem;
+  }
+  .skillSection .skills div:nth-child(6) img {
+    max-width: 8.5rem;
+  }
+}
+
+@media only screen and (max-width: 73rem) {
+  .skillSection .skills {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skillSection .skills div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 13.4rem;
+            flex: 0 0 13.4rem;
+  }
+  .skillSection .skills div:nth-child(2) {
+    max-width: 11rem;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
   .container {
     width: 90%;
   }
@@ -906,9 +977,6 @@ footer a:hover {
   .mainContainer .mainText {
     font-size: 2.8rem;
     text-align: center;
-  }
-  .skillSection {
-    height: 35vh;
   }
   .flexParent {
     -ms-flex-wrap: wrap;
@@ -1053,9 +1121,6 @@ footer a:hover {
   main {
     height: 50vh;
   }
-  .skillSection {
-    height: 40vh;
-  }
   .flexParent img {
     max-width: 58%;
   }
@@ -1080,19 +1145,10 @@ footer a:hover {
   main {
     min-height: 430px;
   }
-  .skillSection {
-    min-height: 300px;
-  }
   .projectMain {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-  }
-}
-
-@media only screen and (max-width: 38.438em) and (max-height: 39.375em) {
-  footer {
-    padding: 4em;
   }
 }
 
@@ -1102,13 +1158,6 @@ footer a:hover {
     height: -moz-fit-content;
     height: fit-content;
     padding-bottom: 35rem;
-  }
-  .skillSection {
-    min-height: 166px;
-    padding: 4em;
-  }
-  footer {
-    padding: 3em;
   }
 }
 
@@ -1124,9 +1173,6 @@ footer a:hover {
   }
   .contactPage {
     min-height: 620px;
-  }
-  footer {
-    padding: 4em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
