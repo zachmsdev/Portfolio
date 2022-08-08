@@ -223,7 +223,7 @@
 
  main {
     width: 100%;
-    height: 70vh;                       // Fallback JPG background because SAFARI :[
+    height: 71.5vh;                       // Fallback JPG background because SAFARI :[
     background-image: url(../images/background.avif), url(../images/background.jpg);
     background-position: top;
     background-size: cover;
@@ -246,17 +246,22 @@
  .mainContainer {
      & .mainText {
          text-align: right;
-         font-family: monospace;
+         font-family: 'Arial';
+         color: #438c97;
          line-height: 1.5;
-         font-size: 2.9rem;
+         font-size: 3.1rem;
          margin-top: 3em;
          user-select: none;
+         padding: 0rem 1.75rem;
          animation: fadeIn 1s ease-in;
          animation-iteration-count: 1;
          & > span {
-            font-family: 'Cinzel', 'Arial';
-            font-weight: 600;
-            color: $thirdColor;
+            font-family: 'Arial';
+            font-weight: 300;
+            color: #ffffff;
+         }
+         & > span:nth-child(1) {
+            font-weight: 700;
          }
      }
  }
@@ -341,7 +346,7 @@
                }
             }
             &:nth-child(2) {
-                                    // return
+                                 
             }
             &:nth-child(3) {
                 & img {
@@ -364,7 +369,6 @@
         }
     }
   }
-
 
   @keyframes moveWaveDown {
     from {
@@ -412,18 +416,18 @@
 
 .mainForm {
     height: 450px;
-    width: 340px;
+    width: 295px;
     background: whitesmoke;
     animation: contactForm 0.75s ease-in;
     animation-fill-mode: forwards;
     & .formTitle {
         width: 100%;
         background: black;
-        margin-bottom: 1.5em;
+        margin-bottom: 1.2em;
         @include bringCenter();
         padding: 1.5rem;
         & > h4 {
-            font-size: 3rem;
+            font-size: 2.6rem;
             color: white;
             font-family: 'Cinzel', 'Arial';
         }
@@ -476,49 +480,51 @@
      height: fit-content;
      @include bringCenter();
      gap: 5rem;
-     margin: 4rem 0rem;
+     margin: 6rem 0rem;
      & h2 {
          user-select: none;
          text-align: center;
-         font-size: 2.5rem;
+         font-size: 2.3rem;
          font-family: 'Cinzel';
-         padding: 0.4em;
+         padding: 0.5em 0.4em;
          color: white;
          background: black;
-         border-top-left-radius: 2rem;
+         border-top-left-radius: 3rem;
          border-top-right-radius: 2rem;
          margin-bottom: 0.5em;
      }
      & > div {
-         width: 400px;
-         height: 425px;
+         width: 351px;
          background: $boxColor;
          border-radius: 2em;
          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
      }
      & .pictureBG {
-        height: 44%;
+        height: 19rem;
         width: 75%;
         margin: 0.3em auto 1em;
-        border-radius: 1em;
+        margin-bottom: 0.75rem;
+        border-radius: 1.5em;
         border: 1px solid black;
      }
      & .projectDescription {
-        padding: 2%;
+        padding: 2% 7%;
         height: 23%;
         color: white;
-        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
         text-align: center;
-        font-family: 'Times New Roman';
+        font-family: 'Arial';
      }
      & p {
          @include bringCenter();
          height: 10%;
          font-size: 1.5rem;
          font-family: 'Cinzel';
+         padding-bottom: 2.5rem;
      }
      & .projectLinks {
-         padding: 0.7em;
+         padding: 0.6em 0.7em;
          border-radius: 0.5em;
          background: black;
          color: white;
@@ -531,7 +537,7 @@
 
  .secondProjectList {
     margin-bottom: 0rem;
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
  }
 
  .bbSearch > .pictureBG {
@@ -604,15 +610,19 @@
                 max-width: 8.5rem;
             }
         }
-    }
+    } 
   }
 
   @media only screen and (max-width: 73rem) { // 1119 px and down
     .skillSection {
+        padding: 5rem 3rem;
         & .skills {
             & div {
                 flex: 0 0 13.4rem;
                 &:nth-child(2) {
+                    max-width: 11rem;
+                }
+                &:nth-child(5) {
                     max-width: 11rem;
                 }
             }
@@ -632,15 +642,30 @@
             min-width: 70px;
         }
     }
+    .firstProjectList .projectDescription,
+    .secondProjectList .projectDescription {
+        padding: 2% 7% 4% 7%;
+    }
     .firstProjectList, .secondProjectList {
         gap: 3rem;
-        & h2 {
-            font-size: 2.3rem;
-        }
         & > div {
-            height: 400px;
+            min-height: 400px;
             width: 375px;
+            max-width: 310px;
         }
+        & h2 {
+            font-size: 2rem;
+            padding: 1.1rem 1.3rem;
+        }
+        & p {
+            padding-bottom: 2rem;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 50rem) {
+    .mainContainer .mainText {
+        font-size: 2.6rem;
     }
   }
 
@@ -653,9 +678,42 @@
     }
   }
 
+  @media only screen and (max-width: 34.5rem) {   // 544 px and down
+    .skillSection {
+        & .skills {
+            & div {      
+                flex: 0 0 9.4rem;
+                // skill spots
+            &:nth-child(1) {
+                & img {
+                 max-width: 8.25rem;
+                }
+             }
+             &:nth-child(3) img {
+                max-width: 8.5rem;
+             }
+             &:nth-child(4) {
+                 & img {
+                     max-width: 8.75rem;
+                    }
+             }
+             &:nth-child(6) {
+                & img {
+                    max-width: 7.25rem;
+                   }
+            }
+            }
+        }
+    }
+  }
+
   @media only screen and (max-width: 38.438em) {    // 615px [mobile]
+    header h3 {
+        font-size: 2.9rem;
+        color: #1b292b;
+    }
     main {
-        height: 55vh;
+        height: 58vh;
         position: relative;
         & > .menuOverlay {
             z-index: 1;
@@ -669,8 +727,9 @@
         }
     }
     .mainContainer .mainText {
-        font-size: 2.8rem;
-        text-align: center;
+        margin-top: 2.3em;
+        font-size: 3rem;
+        padding: 0rem 2.5rem;
     }
     .flexParent {
         flex-wrap: wrap;
@@ -700,22 +759,23 @@
             align-items: center;
             position: relative;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
             & > div:nth-child(2) {
                 width: 100%;
                 height: 3px;
-                background: black;
+                background: #3b3b3b;
             }
             & > .topBun {
                 width: 100%;
                 height: 3px;
-                background: black;
+                background: #3b3b3b;
                 position: absolute;
                 top: 0;
             }
             & > .bottomBun {
                 width: 100%;
                 height: 3px;
-                background: black;
+                background: #3b3b3b;
                 position: absolute;
                 bottom: 0;
             }
@@ -723,21 +783,24 @@
     }
     .mobileMenu {
         height: 23rem;
-        width: 15rem;
-        background: $thirdColor;
+        width: 13rem;
+        background: #356971;
         position: absolute;
         top: -23rem;
         right: 0;
         border-bottom-left-radius: 3rem;
         @include bringCenter();
         flex-direction: column;
-        gap: 2em;
+        gap: 2rem;
         z-index: 2;
         box-shadow: inset 0 0 4px;
-        transition: transform 0.4s ease-in-out;
+        transition: transform 0.275s ease;
         & > a {
-            font-size: 2.7rem;
+            font-size: 2.1rem;
+            font-family: 'Arial';
+            font-weight: 300;
             color: white;
+            -webkit-tap-highlight-color: transparent;
         }
     }
     .mobileMenu.active {
@@ -752,32 +815,40 @@
     .firstProjectList, .secondProjectList {
         flex-direction: column;
         & > div {
-            height: 350px;
-            width: 315px;
+            min-height: 350px;
+            height: 375px;
+            width: 291px;
+            border-bottom-right-radius: 7rem;
+            border-bottom-left-radius: 7rem;
         }
         & .projectDescription {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
+            font-family: 'Arial';
         }
         & .pictureBG {
             width: 215px;
             height: 40%;
+        }
+        & h2 {
+            padding: 0.65em 0rem;
+            font-size: 2rem;
         }
         & p {
             font-size: 1.2rem;
             height: 13%;
         }
         & .projectLinks {
-            padding: 1em;
+            padding: 0.7em 1em;
         }
     }
     .mainForm {
-        width: 300px;
-        height: 440px;
+        width: 287px;
+        min-height: 440px;
         & .formTitle {
             margin-bottom: 1.2em;
-        }
-        & .bottomForm {
-            height: 68px;
+            & > h4 {
+                font-size: 2.7rem;
+            }
         }
     }
     .firstProjectList {
@@ -785,17 +856,6 @@
     }
     .secondProjectList {
         margin-top: 3rem;
-    }
-}
-
-@media only screen and (max-width: 28.813em) {      // 461 PX [Mobile] 
-    main {
-        height: 50vh;
-    }
-    .flexParent {
-        & img {
-            max-width: 58%;
-        }
     }
 }
 
@@ -845,7 +905,7 @@
     .firstProjectList, .secondProjectList {
         & > div {
             width: 350px;
-            height: 369px;
+            min-height: 369px;
         }
     }
     .contactPage {

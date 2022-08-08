@@ -338,7 +338,7 @@ body {
 
 main {
   width: 100%;
-  height: 70vh;
+  height: 71.5vh;
   background-image: url(../images/background.avif), url(../images/background.jpg);
   background-position: top;
   background-size: cover;
@@ -363,14 +363,16 @@ main {
 
 .mainContainer .mainText {
   text-align: right;
-  font-family: monospace;
+  font-family: 'Arial';
+  color: #438c97;
   line-height: 1.5;
-  font-size: 2.9rem;
+  font-size: 3.1rem;
   margin-top: 3em;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  padding: 0rem 1.75rem;
   -webkit-animation: fadeIn 1s ease-in;
           animation: fadeIn 1s ease-in;
   -webkit-animation-iteration-count: 1;
@@ -378,9 +380,13 @@ main {
 }
 
 .mainContainer .mainText > span {
-  font-family: 'Cinzel', 'Arial';
-  font-weight: 600;
-  color: #0d3444;
+  font-family: 'Arial';
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.mainContainer .mainText > span:nth-child(1) {
+  font-weight: 700;
 }
 
 header {
@@ -617,7 +623,7 @@ footer a:hover {
 
 .mainForm {
   height: 450px;
-  width: 340px;
+  width: 295px;
   background: whitesmoke;
   -webkit-animation: contactForm 0.75s ease-in;
           animation: contactForm 0.75s ease-in;
@@ -628,7 +634,7 @@ footer a:hover {
 .mainForm .formTitle {
   width: 100%;
   background: black;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -642,7 +648,7 @@ footer a:hover {
 }
 
 .mainForm .formTitle > h4 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   color: white;
   font-family: 'Cinzel', 'Arial';
 }
@@ -734,7 +740,7 @@ footer a:hover {
       -ms-flex-align: center;
           align-items: center;
   gap: 5rem;
-  margin: 4rem 0rem;
+  margin: 6rem 0rem;
 }
 
 .firstProjectList h2, .secondProjectList h2 {
@@ -743,19 +749,18 @@ footer a:hover {
       -ms-user-select: none;
           user-select: none;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-family: 'Cinzel';
-  padding: 0.4em;
+  padding: 0.5em 0.4em;
   color: white;
   background: black;
-  border-top-left-radius: 2rem;
+  border-top-left-radius: 3rem;
   border-top-right-radius: 2rem;
   margin-bottom: 0.5em;
 }
 
 .firstProjectList > div, .secondProjectList > div {
-  width: 400px;
-  height: 425px;
+  width: 351px;
   background: #474747;
   border-radius: 2em;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -763,20 +768,22 @@ footer a:hover {
 }
 
 .firstProjectList .pictureBG, .secondProjectList .pictureBG {
-  height: 44%;
+  height: 19rem;
   width: 75%;
   margin: 0.3em auto 1em;
-  border-radius: 1em;
+  margin-bottom: 0.75rem;
+  border-radius: 1.5em;
   border: 1px solid black;
 }
 
 .firstProjectList .projectDescription, .secondProjectList .projectDescription {
-  padding: 2%;
+  padding: 2% 7%;
   height: 23%;
   color: white;
-  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
   text-align: center;
-  font-family: 'Times New Roman';
+  font-family: 'Arial';
 }
 
 .firstProjectList p, .secondProjectList p {
@@ -792,10 +799,11 @@ footer a:hover {
   height: 10%;
   font-size: 1.5rem;
   font-family: 'Cinzel';
+  padding-bottom: 2.5rem;
 }
 
 .firstProjectList .projectLinks, .secondProjectList .projectLinks {
-  padding: 0.7em;
+  padding: 0.6em 0.7em;
   border-radius: 0.5em;
   background: black;
   color: white;
@@ -812,7 +820,7 @@ footer a:hover {
 
 .secondProjectList {
   margin-bottom: 0rem;
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
 }
 
 .bbSearch > .pictureBG {
@@ -914,6 +922,9 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 73rem) {
+  .skillSection {
+    padding: 5rem 3rem;
+  }
   .skillSection .skills {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -924,6 +935,9 @@ footer a:hover {
             flex: 0 0 13.4rem;
   }
   .skillSection .skills div:nth-child(2) {
+    max-width: 11rem;
+  }
+  .skillSection .skills div:nth-child(5) {
     max-width: 11rem;
   }
 }
@@ -938,15 +952,30 @@ footer a:hover {
   .flexParent img {
     min-width: 70px;
   }
+  .firstProjectList .projectDescription,
+  .secondProjectList .projectDescription {
+    padding: 2% 7% 4% 7%;
+  }
   .firstProjectList, .secondProjectList {
     gap: 3rem;
   }
-  .firstProjectList h2, .secondProjectList h2 {
-    font-size: 2.3rem;
-  }
   .firstProjectList > div, .secondProjectList > div {
-    height: 400px;
+    min-height: 400px;
     width: 375px;
+    max-width: 310px;
+  }
+  .firstProjectList h2, .secondProjectList h2 {
+    font-size: 2rem;
+    padding: 1.1rem 1.3rem;
+  }
+  .firstProjectList p, .secondProjectList p {
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 50rem) {
+  .mainContainer .mainText {
+    font-size: 2.6rem;
   }
 }
 
@@ -959,9 +988,33 @@ footer a:hover {
   }
 }
 
+@media only screen and (max-width: 34.5rem) {
+  .skillSection .skills div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 9.4rem;
+            flex: 0 0 9.4rem;
+  }
+  .skillSection .skills div:nth-child(1) img {
+    max-width: 8.25rem;
+  }
+  .skillSection .skills div:nth-child(3) img {
+    max-width: 8.5rem;
+  }
+  .skillSection .skills div:nth-child(4) img {
+    max-width: 8.75rem;
+  }
+  .skillSection .skills div:nth-child(6) img {
+    max-width: 7.25rem;
+  }
+}
+
 @media only screen and (max-width: 38.438em) {
+  header h3 {
+    font-size: 2.9rem;
+    color: #1b292b;
+  }
   main {
-    height: 55vh;
+    height: 58vh;
     position: relative;
   }
   main > .menuOverlay {
@@ -975,8 +1028,9 @@ footer a:hover {
     display: none;
   }
   .mainContainer .mainText {
-    font-size: 2.8rem;
-    text-align: center;
+    margin-top: 2.3em;
+    font-size: 3rem;
+    padding: 0rem 2.5rem;
   }
   .flexParent {
     -ms-flex-wrap: wrap;
@@ -1009,30 +1063,31 @@ footer a:hover {
             align-items: center;
     position: relative;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
   header .burgerIcon > div:nth-child(2) {
     width: 100%;
     height: 3px;
-    background: black;
+    background: #3b3b3b;
   }
   header .burgerIcon > .topBun {
     width: 100%;
     height: 3px;
-    background: black;
+    background: #3b3b3b;
     position: absolute;
     top: 0;
   }
   header .burgerIcon > .bottomBun {
     width: 100%;
     height: 3px;
-    background: black;
+    background: #3b3b3b;
     position: absolute;
     bottom: 0;
   }
   .mobileMenu {
     height: 23rem;
-    width: 15rem;
-    background: #0d3444;
+    width: 13rem;
+    background: #356971;
     position: absolute;
     top: -23rem;
     right: 0;
@@ -1050,18 +1105,21 @@ footer a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 2em;
+    gap: 2rem;
     z-index: 2;
     -webkit-box-shadow: inset 0 0 4px;
             box-shadow: inset 0 0 4px;
-    -webkit-transition: -webkit-transform 0.4s ease-in-out;
-    transition: -webkit-transform 0.4s ease-in-out;
-    transition: transform 0.4s ease-in-out;
-    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+    -webkit-transition: -webkit-transform 0.275s ease;
+    transition: -webkit-transform 0.275s ease;
+    transition: transform 0.275s ease;
+    transition: transform 0.275s ease, -webkit-transform 0.275s ease;
   }
   .mobileMenu > a {
-    font-size: 2.7rem;
+    font-size: 2.1rem;
+    font-family: 'Arial';
+    font-weight: 300;
     color: white;
+    -webkit-tap-highlight-color: transparent;
   }
   .mobileMenu.active {
     display: -webkit-box;
@@ -1082,47 +1140,46 @@ footer a:hover {
             flex-direction: column;
   }
   .firstProjectList > div, .secondProjectList > div {
-    height: 350px;
-    width: 315px;
+    min-height: 350px;
+    height: 375px;
+    width: 291px;
+    border-bottom-right-radius: 7rem;
+    border-bottom-left-radius: 7rem;
   }
   .firstProjectList .projectDescription, .secondProjectList .projectDescription {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    font-family: 'Arial';
   }
   .firstProjectList .pictureBG, .secondProjectList .pictureBG {
     width: 215px;
     height: 40%;
+  }
+  .firstProjectList h2, .secondProjectList h2 {
+    padding: 0.65em 0rem;
+    font-size: 2rem;
   }
   .firstProjectList p, .secondProjectList p {
     font-size: 1.2rem;
     height: 13%;
   }
   .firstProjectList .projectLinks, .secondProjectList .projectLinks {
-    padding: 1em;
+    padding: 0.7em 1em;
   }
   .mainForm {
-    width: 300px;
-    height: 440px;
+    width: 287px;
+    min-height: 440px;
   }
   .mainForm .formTitle {
     margin-bottom: 1.2em;
   }
-  .mainForm .bottomForm {
-    height: 68px;
+  .mainForm .formTitle > h4 {
+    font-size: 2.7rem;
   }
   .firstProjectList {
     margin-bottom: 3rem;
   }
   .secondProjectList {
     margin-top: 3rem;
-  }
-}
-
-@media only screen and (max-width: 28.813em) {
-  main {
-    height: 50vh;
-  }
-  .flexParent img {
-    max-width: 58%;
   }
 }
 
@@ -1169,7 +1226,7 @@ footer a:hover {
   }
   .firstProjectList > div, .secondProjectList > div {
     width: 350px;
-    height: 369px;
+    min-height: 369px;
   }
   .contactPage {
     min-height: 620px;
