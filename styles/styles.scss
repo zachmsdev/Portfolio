@@ -28,7 +28,7 @@
  $firstColor: #2EC8D1;
  $secondColor: #438c97;
  $thirdColor: #0d3444;
- $boxColor: #474747;
+ $boxColor: #393131;
 
  .container {
      width: 75%;
@@ -249,7 +249,7 @@
          font-family: 'Arial';
          color: #438c97;
          line-height: 1.5;
-         font-size: 3.1rem;
+         font-size: 3.4rem;
          margin-top: 3em;
          user-select: none;
          padding: 0rem 1.75rem;
@@ -300,6 +300,7 @@
 
  .projectHead {
      border-bottom: 1px solid black;
+     position: relative;
  }
 
  a {
@@ -332,6 +333,7 @@
         display: flex;
         gap: 8rem;
         justify-content: center;
+        overflow-y: hidden;
         & > div {
             flex: 0 0 12.4rem;
             @include bringCenter;
@@ -344,9 +346,6 @@
                & img {
                 max-width: 10.75rem;
                }
-            }
-            &:nth-child(2) {
-                                 
             }
             &:nth-child(3) {
                 & img {
@@ -404,28 +403,35 @@
   // ------------------------------------------ Main Section [Contact Page]
 
 .contactPage {
-    min-height: 620px;
-    height: 90vh;
+    min-height: 682px;
+    height: 92vh;
     overflow: hidden;
     & .formSection {
         width: 100%;
         height: 90%;
-        @include bringCenter();
+        display: flex;
+        justify-content: center;
     }
 }
 
+.contactHeader {
+    margin-bottom: 9rem;
+}
+
 .mainForm {
-    height: 450px;
-    width: 295px;
+    height: 440px;
+    width: 297px;
     background: whitesmoke;
     animation: contactForm 0.75s ease-in;
     animation-fill-mode: forwards;
+    animation-delay: 1s;
+
     & .formTitle {
         width: 100%;
         background: black;
-        margin-bottom: 1.2em;
+        margin-bottom: 1em;
         @include bringCenter();
-        padding: 1.5rem;
+        padding: 1.2rem;
         & > h4 {
             font-size: 2.6rem;
             color: white;
@@ -459,7 +465,6 @@
             background: black;
             color: white;
             transition: box-shadow 0.3s ease, padding 0.2s ease;
-            border-radius: 0.4em;
             box-shadow: inset 0 0px 0 0 #55b7e3;
             &:hover {
                 box-shadow: inset 0px 50px 0 0 #0D3444;
@@ -474,63 +479,69 @@
  .projectMain {
      height: fit-content;
      background: #3c8893;
+     position: relative;
+     overflow-x: hidden;
  }
 
  .firstProjectList, .secondProjectList {
      height: fit-content;
      @include bringCenter();
      gap: 5rem;
-     margin: 6rem 0rem;
+     margin: 4rem 0rem;
+     padding-left: 0.5rem;
      & h2 {
          user-select: none;
          text-align: center;
-         font-size: 2.3rem;
+         font-size: 2rem;
          font-family: 'Cinzel';
-         padding: 0.5em 0.4em;
          color: white;
-         background: black;
-         border-top-left-radius: 3rem;
-         border-top-right-radius: 2rem;
-         margin-bottom: 0.5em;
+         margin-bottom: 0.25rem;
      }
      & > div {
-         width: 351px;
+         width: 305px;
+         min-height: 412px;
          background: $boxColor;
-         border-radius: 2em;
+         border-radius: 1.5em;
+         padding-top: 0.5rem;
          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
      }
      & .pictureBG {
         height: 19rem;
         width: 75%;
-        margin: 0.3em auto 1em;
-        margin-bottom: 0.75rem;
-        border-radius: 1.5em;
-        border: 1px solid black;
+        margin: 1.25rem auto 0.75em;
+        border-radius: 0.75em;
      }
      & .projectDescription {
-        padding: 2% 7%;
+        padding: 2% 12%;
         height: 23%;
         color: white;
         line-height: 1.2;
-        margin-bottom: 0.8rem;
         text-align: center;
+        margin-bottom: 1.1rem;
+        font-size: 1.5rem;
         font-family: 'Arial';
      }
-     & p {
-         @include bringCenter();
+     & .techs {
+         text-align: center;
          height: 10%;
-         font-size: 1.5rem;
+         font-size: 1.2rem;
          font-family: 'Cinzel';
-         padding-bottom: 2.5rem;
+         margin-bottom: 0rem;
+         color: lightgray;
+     }
+     & p {
+        text-align: center;
      }
      & .projectLinks {
-         padding: 0.6em 0.7em;
-         border-radius: 0.5em;
-         background: black;
-         color: white;
-         transition: transform 0.3s ease;
+        padding: 0.7em 0.9em;
+        font-size: 1.2rem;
+        background: #0f0f0f;
+        font-family: 'Cinzel';
+        color: white;
+        box-shadow: inset 0 0 0 0 #383838;
+        transition: box-shadow 0.3s ease;
          &:hover {
-            transform: scale(1.05);
+            box-shadow: inset 0 0 0 20px #383838;
          }
      }
  }
@@ -554,6 +565,12 @@
 
  .rPsProject > .pictureBG {
     background: url('../images/rPs.PNG');
+    background-position: center;
+    background-size: cover;
+}
+
+.riorkuProject > .pictureBG {
+    background: url('../images/riorku.PNG');
     background-position: center;
     background-size: cover;
 }
@@ -642,30 +659,31 @@
             min-width: 70px;
         }
     }
-    .firstProjectList .projectDescription,
-    .secondProjectList .projectDescription {
-        padding: 2% 7% 4% 7%;
-    }
     .firstProjectList, .secondProjectList {
-        gap: 3rem;
+        gap: 4rem;
         & > div {
-            min-height: 400px;
+            min-height: 374px;
             width: 375px;
-            max-width: 310px;
+            max-width: 268px;
+        }
+        & .pictureBG {
+            height: 16rem;
         }
         & h2 {
-            font-size: 2rem;
-            padding: 1.1rem 1.3rem;
+            font-size: 1.9rem;
         }
-        & p {
-            padding-bottom: 2rem;
+        & .techs {
+            margin-bottom: 0rem;
+        }
+        & .projectLinks {
+            padding: 0.6em 0.7em;
         }
     }
   }
 
   @media only screen and (max-width: 50rem) {
     .mainContainer .mainText {
-        font-size: 2.6rem;
+        font-size: 3rem;
     }
   }
 
@@ -720,7 +738,7 @@
             position: absolute;
             top: 0;
             width: 100vw;
-            height: 100vh;
+            height: 110vh;
             background: black;
             opacity: 0.5;
             display: none;
@@ -728,7 +746,7 @@
     }
     .mainContainer .mainText {
         margin-top: 2.3em;
-        font-size: 3rem;
+        font-size: 2.75rem;
         padding: 0rem 2.5rem;
     }
     .flexParent {
@@ -782,11 +800,12 @@
         }
     }
     .mobileMenu {
-        height: 23rem;
+        height: 22rem;
         width: 13rem;
         background: #356971;
         position: absolute;
-        top: -23rem;
+        top: 0;
+        transform: translateY(-22rem);
         right: 0;
         border-bottom-left-radius: 3rem;
         @include bringCenter();
@@ -794,7 +813,7 @@
         gap: 2rem;
         z-index: 2;
         box-shadow: inset 0 0 4px;
-        transition: transform 0.275s ease;
+        transition: transform 0.35s ease;
         & > a {
             font-size: 2.1rem;
             font-family: 'Arial';
@@ -805,7 +824,7 @@
     }
     .mobileMenu.active {
         display: flex;
-        transform: translateY(23rem);
+        transform: translateY(0rem);
     }
 
     .menuOverlay.active {
@@ -814,38 +833,35 @@
 
     .firstProjectList, .secondProjectList {
         flex-direction: column;
+        gap: 3rem;
         & > div {
             min-height: 350px;
-            height: 375px;
-            width: 291px;
-            border-bottom-right-radius: 7rem;
-            border-bottom-left-radius: 7rem;
+            height: 360px;
+            width: 249px;
+            border-bottom-right-radius: 5rem;
+            border-bottom-left-radius: 5rem;
+        }
+        & h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0rem;
+        }
+        & .techs {
+            margin-bottom: -1.7rem;
         }
         & .projectDescription {
             font-size: 1.5rem;
             font-family: 'Arial';
+            padding: 2% 7%;
         }
         & .pictureBG {
-            width: 215px;
+            width: 75%;
             height: 40%;
-        }
-        & h2 {
-            padding: 0.65em 0rem;
-            font-size: 2rem;
-        }
-        & p {
-            font-size: 1.2rem;
-            height: 13%;
-        }
-        & .projectLinks {
-            padding: 0.7em 1em;
         }
     }
     .mainForm {
         width: 287px;
         min-height: 440px;
         & .formTitle {
-            margin-bottom: 1.2em;
             & > h4 {
                 font-size: 2.7rem;
             }
@@ -881,7 +897,7 @@
 
   @media only screen and (max-width: 38.438em) and (max-height: 53.750em) {     // Max-width: 615px, max-height: 860px
     main {
-        min-height: 430px;
+        min-height: 493px;
     }
     .projectMain {
         height: fit-content;
@@ -893,7 +909,7 @@
 
   @media only screen and (min-width: 38.438em) and (max-height: 48.125em) {     // Min-width: 615px, max-height: 770px
     .indexMain {
-        height: fit-content;
+        height: 609px;
         padding-bottom: 35rem;
     }
   }
@@ -908,7 +924,27 @@
             min-height: 369px;
         }
     }
-    .contactPage {
-        min-height: 620px;
+  }
+
+  // yes i know these media queries could be much better, will fix soon
+  // what happened was I built desktop first and added new updates mobile first
+  // i like to build mobile first now it is much easier imo
+
+  @media only screen and (min-width: 920px) {
+    .skillSection .skills {
+        flex-wrap: nowrap;
+        gap: 3rem;
+    }
+  }
+
+  @media only screen and (min-width: 1075px) {
+    .skillSection .skills {
+        gap: 6rem;
+    }
+  }
+
+  @media only screen and (min-width: 1315px) {
+    .skillSection .skills {
+        gap: 8rem;
     }
   }

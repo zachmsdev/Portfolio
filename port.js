@@ -10,11 +10,13 @@ const mobileMenu = () => {
  
     // Functions
     const openMobile = () => {
+        document.body.style.overflowY = 'hidden';
         mobileMenu.classList.add('active');
         mobileMenuOverlay.classList.add('active');
     }
 
     const closeMobile = () => {
+        document.body.style.overflowY = 'initial';
         mobileMenu.classList.remove('active');
         mobileMenuOverlay.classList.remove('active');
     }
