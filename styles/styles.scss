@@ -77,6 +77,18 @@
             @include bringCenter;
             flex-direction: column;
             animation: showScreen 1.68s, screen1 0.7s steps(1, end) infinite;
+            & p {
+                position: absolute;
+                font-family: 'Arial';
+                font-size: 1.9rem;
+                top: -4rem;
+                color: #6c6c6c;
+                opacity: 0;
+                transition: opacity 1.75s ease-in;
+                &.hello {
+                    opacity: 1;
+                }
+            }
             & .screen2 {
                 width: 85%;
                 height: 85%;
@@ -104,10 +116,13 @@
                     &::before {
                         content: '';
                         display: inline-block;
-                        transform: translate(0.25rem, -0.6rem);
+                        transform: translate(0.257rem, -1.1rem);
                         height: 0.49rem;
                         width: 0.07rem;
                         background: $secondColor;
+                    }
+                    &.flicker {
+                        animation: startFlicker 1s linear infinite;
                     }
                 }
                 & .shutdownScreenT {
@@ -187,6 +202,14 @@
     } 
   }
 
+  @keyframes startFlicker {
+    from {
+        border: 0.8px solid #438c97;
+    } to {
+        border: 1px solid red;
+    }
+  }
+
   @keyframes screen1 {
     0% {
       background: white;
@@ -229,9 +252,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    // animation: moveBG 25s alternate infinite;
  }
-
+ 
  #wave {
      width: 100%;
      position: absolute;
@@ -248,9 +270,9 @@
          text-align: right;
          font-family: 'Arial';
          color: #438c97;
-         line-height: 1.5;
+         line-height: 1.3;
          font-size: 3.4rem;
-         margin-top: 3em;
+         margin-top: 2.5em;
          user-select: none;
          padding: 0rem 1.75rem;
          animation: fadeIn 1s ease-in;
@@ -502,6 +524,8 @@
          min-height: 412px;
          background: $boxColor;
          border-radius: 1.5em;
+         border-bottom-left-radius: 8rem;
+         border-bottom-right-radius: 8rem;
          padding-top: 0.5rem;
          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
      }
@@ -541,7 +565,9 @@
         box-shadow: inset 0 0 0 0 #383838;
         transition: box-shadow 0.3s ease;
          &:hover {
-            box-shadow: inset 0 0 0 20px #383838;
+            box-shadow: inset 0 0 0 20px #727272;
+            color: black;
+            font-weight: 700;
          }
      }
  }
@@ -838,8 +864,8 @@
             min-height: 350px;
             height: 360px;
             width: 249px;
-            border-bottom-right-radius: 5rem;
-            border-bottom-left-radius: 5rem;
+            border-bottom-right-radius: 6rem;
+            border-bottom-left-radius: 6rem;
         }
         & h2 {
             font-size: 1.8rem;
@@ -928,12 +954,13 @@
 
   // yes i know these media queries could be much better, will fix soon
   // what happened was I built desktop first and added new updates mobile first
-  // i like to build mobile first now it is much easier imo
+  // i like to build mobile first now which is much easier imo
 
   @media only screen and (min-width: 920px) {
     .skillSection .skills {
         flex-wrap: nowrap;
         gap: 3rem;
+        overflow-x: hidden;
     }
   }
 

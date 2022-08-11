@@ -39,6 +39,8 @@ const monitor = () => {
         const powerButton = document.querySelector('.powerButton');
         const closeScreenTop = document.querySelector('.shutdownScreenT');
         const closeScreenBottom = document.querySelector('.shutdownScreenB');
+        const siteName = document.querySelector('.screen > p');
+        // show the
         startScreen.style.display = 'grid';
         document.querySelector('.homePage').style.overflowY = 'hidden';
 
@@ -50,6 +52,8 @@ const monitor = () => {
         }
 
         const shutdown = () => {
+            siteName.classList.add('hello');
+            powerButton.classList.remove('flicker');
             closeScreenTop.classList.toggle('show');
             closeScreenBottom.classList.toggle('show');
         }
