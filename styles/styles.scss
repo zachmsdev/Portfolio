@@ -80,8 +80,8 @@
             & p {
                 position: absolute;
                 font-family: 'Arial';
-                font-size: 1.9rem;
-                top: -4rem;
+                font-size: 1.8rem;
+                top: -3.9rem;
                 color: #6c6c6c;
                 opacity: 0;
                 transition: opacity 1.75s ease-in;
@@ -122,11 +122,11 @@
                         background: $secondColor;
                     }
                     &.flicker {
-                        animation: startFlicker 1s linear infinite;
+                        animation: startFlicker 1.5s linear infinite;
                     }
                 }
                 & .shutdownScreenT {
-                    transition: height 0.3s ease-in;
+                    transition: height 0.325s ease-in;
                     width: 21.5rem;
                     height: 0rem;
                     background-color: black;
@@ -137,7 +137,7 @@
                     }
                 }
                 & .shutdownScreenB {
-                    transition: height 0.3s ease-in;
+                    transition: height 0.325s ease-in;
                     width: 21.5rem;
                     height: 0rem;
                     background-color: black;
@@ -205,6 +205,7 @@
   @keyframes startFlicker {
     from {
         border: 0.8px solid #438c97;
+        background-color: rgb(196, 196, 196);
     } to {
         border: 1px solid red;
     }
@@ -246,7 +247,7 @@
 
  main {
     width: 100%;
-    height: 71.5vh;                       // Fallback JPG background because SAFARI :[
+    height: 72vh;                       // Fallback JPG background because SAFARI :[
     background-image: url(../images/background.avif), url(../images/background.jpg);
     background-position: top;
     background-size: cover;
@@ -426,7 +427,7 @@
 
 .contactPage {
     min-height: 682px;
-    height: 92vh;
+    height: 93vh;
     overflow: hidden;
     & .formSection {
         width: 100%;
@@ -572,6 +573,25 @@
      }
  }
 
+ .card {
+    z-index: 2;
+ }
+ 
+ .mountainBG {
+    position: absolute;
+    height: 73rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 0;
+    background: url('../images/mnts.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    filter: brightness(0.9);
+ }
+
  .secondProjectList {
     margin-bottom: 0rem;
     padding-bottom: 6rem;
@@ -620,7 +640,6 @@
         box-shadow: 1rem 1rem 0rem #181818;
     }
 }
-
 
   // ---------------------------------- Media Queries (widths) [Built Desktop First]
   
@@ -760,7 +779,7 @@
         height: 58vh;
         position: relative;
         & > .menuOverlay {
-            z-index: 1;
+            z-index: 3;
             position: absolute;
             top: 0;
             width: 100vw;
@@ -837,9 +856,9 @@
         @include bringCenter();
         flex-direction: column;
         gap: 2rem;
-        z-index: 2;
+        z-index: 4;
         box-shadow: inset 0 0 4px;
-        transition: transform 0.35s ease;
+        transition: transform 0.4s ease;
         & > a {
             font-size: 2.1rem;
             font-family: 'Arial';
@@ -849,8 +868,7 @@
         }
     }
     .mobileMenu.active {
-        display: flex;
-        transform: translateY(0rem);
+        transform: translateY(-0.5rem);
     }
 
     .menuOverlay.active {
@@ -944,17 +962,11 @@
     .projectMain {
         height: fit-content;
     }
-    .firstProjectList, .secondProjectList {
-        & > div {
-            width: 350px;
-            min-height: 369px;
-        }
-    }
   }
 
-  // yes i know these media queries could be much better, will fix soon
-  // what happened was I built desktop first and added new updates mobile first
-  // i like to build mobile first now which is much easier imo
+  // yes these media queries are not the most useful, I'll fix soon
+  // what happened was I built desktop first and started adding new updates mobile first
+  // now i always build mobile first which is much easier imo
 
   @media only screen and (min-width: 920px) {
     .skillSection .skills {

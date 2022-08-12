@@ -40,7 +40,7 @@ const monitor = () => {
         const closeScreenTop = document.querySelector('.shutdownScreenT');
         const closeScreenBottom = document.querySelector('.shutdownScreenB');
         const siteName = document.querySelector('.screen > p');
-        // show the
+        // show the start screen
         startScreen.style.display = 'grid';
         document.querySelector('.homePage').style.overflowY = 'hidden';
 

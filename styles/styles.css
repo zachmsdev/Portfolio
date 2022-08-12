@@ -87,8 +87,8 @@ body {
 .startScreen .computerWrapper .screen p {
   position: absolute;
   font-family: 'Arial';
-  font-size: 1.9rem;
-  top: -4rem;
+  font-size: 1.8rem;
+  top: -3.9rem;
   color: #6c6c6c;
   opacity: 0;
   -webkit-transition: opacity 1.75s ease-in;
@@ -150,13 +150,13 @@ body {
 }
 
 .startScreen .computerWrapper .screen .screen2 .powerButton.flicker {
-  -webkit-animation: startFlicker 1s linear infinite;
-          animation: startFlicker 1s linear infinite;
+  -webkit-animation: startFlicker 1.5s linear infinite;
+          animation: startFlicker 1.5s linear infinite;
 }
 
 .startScreen .computerWrapper .screen .screen2 .shutdownScreenT {
-  -webkit-transition: height 0.3s ease-in;
-  transition: height 0.3s ease-in;
+  -webkit-transition: height 0.325s ease-in;
+  transition: height 0.325s ease-in;
   width: 21.5rem;
   height: 0rem;
   background-color: black;
@@ -169,8 +169,8 @@ body {
 }
 
 .startScreen .computerWrapper .screen .screen2 .shutdownScreenB {
-  -webkit-transition: height 0.3s ease-in;
-  transition: height 0.3s ease-in;
+  -webkit-transition: height 0.325s ease-in;
+  transition: height 0.325s ease-in;
   width: 21.5rem;
   height: 0rem;
   background-color: black;
@@ -283,6 +283,7 @@ body {
 @-webkit-keyframes startFlicker {
   from {
     border: 0.8px solid #438c97;
+    background-color: #c4c4c4;
   }
   to {
     border: 1px solid red;
@@ -292,6 +293,7 @@ body {
 @keyframes startFlicker {
   from {
     border: 0.8px solid #438c97;
+    background-color: #c4c4c4;
   }
   to {
     border: 1px solid red;
@@ -376,7 +378,7 @@ body {
 
 main {
   width: 100%;
-  height: 71.5vh;
+  height: 72vh;
   background-image: url(../images/background.avif), url(../images/background.jpg);
   background-position: top;
   background-size: cover;
@@ -643,7 +645,7 @@ footer a:hover {
 
 .contactPage {
   min-height: 682px;
-  height: 92vh;
+  height: 93vh;
   overflow: hidden;
 }
 
@@ -864,6 +866,26 @@ footer a:hover {
   font-weight: 700;
 }
 
+.card {
+  z-index: 2;
+}
+
+.mountainBG {
+  position: absolute;
+  height: 73rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 0;
+  background: url("../images/mnts.png");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
 .secondProjectList {
   margin-bottom: 0rem;
   padding-bottom: 6rem;
@@ -1071,7 +1093,7 @@ footer a:hover {
     position: relative;
   }
   main > .menuOverlay {
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     top: 0;
     width: 100vw;
@@ -1161,13 +1183,13 @@ footer a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 2rem;
-    z-index: 2;
+    z-index: 4;
     -webkit-box-shadow: inset 0 0 4px;
             box-shadow: inset 0 0 4px;
-    -webkit-transition: -webkit-transform 0.35s ease;
-    transition: -webkit-transform 0.35s ease;
-    transition: transform 0.35s ease;
-    transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+    -webkit-transition: -webkit-transform 0.4s ease;
+    transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   }
   .mobileMenu > a {
     font-size: 2.1rem;
@@ -1177,11 +1199,8 @@ footer a:hover {
     -webkit-tap-highlight-color: transparent;
   }
   .mobileMenu.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transform: translateY(0rem);
-            transform: translateY(0rem);
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
   }
   .menuOverlay.active {
     display: -webkit-box;
@@ -1271,10 +1290,6 @@ footer a:hover {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-  }
-  .firstProjectList > div, .secondProjectList > div {
-    width: 350px;
-    min-height: 369px;
   }
 }
 
