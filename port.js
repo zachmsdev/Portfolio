@@ -75,7 +75,6 @@ const tabHighlight = () => {
 
     if (URL.includes('contact')) {
         arrayOfLinks[2].classList.add('active');
-        
     } else if (URL.includes('projects')) {
         arrayOfLinks[1].classList.add('active');
     } else {

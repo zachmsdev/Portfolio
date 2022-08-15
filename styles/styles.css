@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-html {
+:root {
   height: 100%;
   font-size: 62.5%;
 }
@@ -282,13 +282,13 @@ body {
 
 @-webkit-keyframes startFlicker {
   to {
-    background-color: #919191;
+    background-color: #9b9b9b;
   }
 }
 
 @keyframes startFlicker {
   to {
-    background-color: #919191;
+    background-color: #9b9b9b;
   }
 }
 
@@ -399,7 +399,7 @@ main {
   color: #438c97;
   line-height: 1.3;
   font-size: 3.4rem;
-  margin-top: 2.5em;
+  margin-top: 2.3em;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -464,18 +464,54 @@ header ul li.active {
   font-weight: 700;
 }
 
-header > h3 {
-  font-family: 'Cinzel', 'Arial';
+header h3 {
+  font-family: 'Cinzel';
   font-size: 3.2rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+header h3::after {
+  content: 'WS';
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.75rem;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  background: #438c97;
+  color: white;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0.5px 0.5px 3px #676767;
+          box-shadow: inset 0.5px 0.5px 3px #676767;
+  -webkit-animation: spinLogo 0.25s ease;
+          animation: spinLogo 0.25s ease;
 }
 
 .projectHead {
   border-bottom: 1px solid black;
   position: relative;
+}
+
+.projectHead h3::after {
+  background-color: #ededed;
+  color: black;
+  -webkit-box-shadow: inset 0.5px 0.5px 4px #676767;
+          box-shadow: inset 0.5px 0.5px 4px #676767;
+  -webkit-animation: spinLogo 0.25s ease;
+          animation: spinLogo 0.25s ease;
 }
 
 a {
@@ -498,6 +534,20 @@ a {
   }
   to {
     background-position: center;
+  }
+}
+
+@-webkit-keyframes spinLogo {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinLogo {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -711,10 +761,14 @@ footer a:hover {
   position: relative;
 }
 
+.mainForm .theForm input:focus, .mainForm .theForm textarea:focus {
+  background: #fffbfb;
+}
+
 .mainForm .theForm > textarea {
   resize: none;
   font-size: 16px;
-  padding: 0.2em;
+  padding: 0.4em;
   font-family: 'Arial';
 }
 
@@ -791,7 +845,7 @@ footer a:hover {
   font-size: 2rem;
   font-family: 'Cinzel';
   color: white;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.1rem;
 }
 
 .firstProjectList > div, .secondProjectList > div {
@@ -837,6 +891,7 @@ footer a:hover {
 
 .firstProjectList .projectLinks, .secondProjectList .projectLinks {
   padding: 0.7em 0.9em;
+  margin-right: 0.75rem;
   font-size: 1.2rem;
   background: #131313;
   font-family: 'Cinzel';
@@ -856,10 +911,15 @@ footer a:hover {
   font-weight: 700;
 }
 
+.firstProjectList .codeLink, .secondProjectList .codeLink {
+  margin-right: 0;
+  cursor: pointer;
+}
+
 .card {
   z-index: 2;
-  -webkit-box-shadow: inset 0 0 11px #7b7b7b;
-          box-shadow: inset 0 0 11px #7b7b7b;
+  -webkit-box-shadow: inset 0 0 10px #7b7b7b;
+          box-shadow: inset 0 0 10px #7b7b7b;
 }
 
 .mountainBG {
@@ -881,6 +941,27 @@ footer a:hover {
 .secondProjectList {
   margin-bottom: 0rem;
   padding-bottom: 6rem;
+}
+
+.mobileQuestion {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 30rem;
+  left: 0;
+  background-color: #a6c3d5;
+  padding: 1rem 2rem;
+  font-family: 'Arial';
+  -webkit-animation: fadeIn 1.6s;
+          animation: fadeIn 1.6s;
+}
+
+.mobileQuestion > h2 {
+  font-size: 2.6rem;
+}
+
+.mobileQuestion > p {
+  color: #363636;
 }
 
 .bbSearch > .pictureBG {
@@ -989,7 +1070,7 @@ footer a:hover {
 
 @media only screen and (max-width: 73rem) {
   .skillSection {
-    padding: 5rem 3rem;
+    padding: 5rem 3rem 5.3rem;
   }
   .skillSection .skills {
     -ms-flex-wrap: wrap;
@@ -1038,6 +1119,15 @@ footer a:hover {
   .firstProjectList .projectLinks, .secondProjectList .projectLinks {
     padding: 0.6em 0.7em;
   }
+  .mobileQuestion {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 70rem) {
+  .mobileQuestion {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 50rem) {
@@ -1078,7 +1168,9 @@ footer a:hover {
 @media only screen and (max-width: 38.438em) {
   header h3 {
     font-size: 2.9rem;
-    color: #1b292b;
+  }
+  header h3::after {
+    font-size: 1.8rem;
   }
   main {
     height: 58vh;
@@ -1156,9 +1248,7 @@ footer a:hover {
     width: 13rem;
     background: #356971;
     position: absolute;
-    top: 0;
-    -webkit-transform: translateY(-22rem);
-            transform: translateY(-22rem);
+    top: -22rem;
     right: 0;
     border-bottom-left-radius: 3rem;
     display: -webkit-box;
@@ -1178,10 +1268,10 @@ footer a:hover {
     z-index: 4;
     -webkit-box-shadow: inset 0 0 4px;
             box-shadow: inset 0 0 4px;
-    -webkit-transition: -webkit-transform 0.4s ease;
-    transition: -webkit-transform 0.4s ease;
-    transition: transform 0.4s ease;
-    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+    -webkit-transition: -webkit-transform 0.45s ease;
+    transition: -webkit-transform 0.45s ease;
+    transition: transform 0.45s ease;
+    transition: transform 0.45s ease, -webkit-transform 0.45s ease;
   }
   .mobileMenu > a {
     font-size: 2.1rem;
@@ -1190,9 +1280,12 @@ footer a:hover {
     color: white;
     -webkit-tap-highlight-color: transparent;
   }
+  .mobileMenu > a:active {
+    color: #b9b9b9;
+  }
   .mobileMenu.active {
-    -webkit-transform: translateY(-0.5rem);
-            transform: translateY(-0.5rem);
+    -webkit-transform: translateY(21.5rem);
+            transform: translateY(21.5rem);
   }
   .menuOverlay.active {
     display: -webkit-box;
@@ -1228,6 +1321,19 @@ footer a:hover {
   .firstProjectList .pictureBG, .secondProjectList .pictureBG {
     width: 75%;
     height: 40%;
+  }
+  .mobileQuestion {
+    display: block;
+    position: static;
+    background-color: transparent;
+    text-align: center;
+    font-family: 'Arial';
+  }
+  .mobileQuestion > h2 {
+    font-size: 2.6rem;
+  }
+  .mobileQuestion > p {
+    color: #363636;
   }
   .mainForm {
     width: 287px;
