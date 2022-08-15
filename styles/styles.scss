@@ -313,7 +313,7 @@
      }
      & h3 {
          font-family: 'Cinzel';
-         font-size: 3.2rem;
+         font-size: 3.1rem;
          user-select: none;
          display: inline-flex;
          &::after {
@@ -337,7 +337,7 @@
      border-bottom: 1px solid black;
      position: relative;
      & h3::after {
-        background-color: #ededed;
+        background-color: #e1e1e1;
         color: black;
         box-shadow: inset 0.5px 0.5px 4px #676767;
         animation: spinLogo 0.25s ease;
@@ -494,6 +494,8 @@
         font-family: 'Arial';
         position: relative;
         & input, textarea {
+            padding-left: 0.3rem;
+            color: #232323;
             &:focus {
                 background: #fffbfb;
             }
@@ -501,7 +503,7 @@
         & > textarea {
             resize: none;
             font-size: 16px;
-            padding: 0.4em;
+            padding: 0.5rem;
             font-family: 'Arial';
         }
     }
@@ -631,21 +633,22 @@
     padding-bottom: 6rem;
  }
 
- .mobileQuestion {
+ .Question {
     display: block;
     position: absolute;
     text-align: center;
     top: 30rem;
     left: 0;
-    background-color: #a6c3d5;
+    background-color: #5d9fc8;
     padding: 1rem 2rem;
     font-family: 'Arial';
     animation: fadeIn 1.6s;
     & > h2 {
         font-size: 2.6rem;
+        color: white;
     }
     & > p {
-        color: #363636;
+        color: #d0d0d0;
     }
  }
 
@@ -773,16 +776,16 @@
             margin-bottom: 0rem;
         }
         & .projectLinks {
-            padding: 0.6em 0.7em;
+            padding: 0.6em 0.9em;
         }
     }
-    .mobileQuestion {
+    .Question {
         display: none;
     }
   }
 
   @media only screen and (max-width: 70rem) {
-    .mobileQuestion {
+    .Question {
         display: none;
     }
   }
@@ -968,7 +971,7 @@
             height: 40%;
         }
     }
-    .mobileQuestion {
+    .Question {
         display: block;
         position: static;
         background-color: transparent;
@@ -976,9 +979,19 @@
         font-family: 'Arial';
         & > h2 {
             font-size: 2.6rem;
+            width: fit-content;
+            margin: 0 auto;
+            background-color: #5e5e5e;
+            margin-bottom: 0.3rem;
+            padding: 2rem;
         }
         & > p {
             color: #363636;
+            width: fit-content;
+            margin: 0 auto;
+            transform: translate(65px, -18px);
+            padding: 1rem;
+            background-color: white;
         }
      }
     .mainForm {
@@ -1043,9 +1056,8 @@
     }
   }
 
-  // yes these media queries are not the most useful, I'll fix soon
-  // what happened was I built desktop first and started adding new updates mobile first
-  // now i always build mobile first which is much easier imo
+  // will fix these media queries up soon
+  // I built desktop first and started adding new updates mobile first
 
   @media only screen and (min-width: 920px) {
     .skillSection .skills {

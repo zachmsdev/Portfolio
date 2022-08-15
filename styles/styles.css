@@ -466,7 +466,7 @@ header ul li.active {
 
 header h3 {
   font-family: 'Cinzel';
-  font-size: 3.2rem;
+  font-size: 3.1rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -506,7 +506,7 @@ header h3::after {
 }
 
 .projectHead h3::after {
-  background-color: #ededed;
+  background-color: #e1e1e1;
   color: black;
   -webkit-box-shadow: inset 0.5px 0.5px 4px #676767;
           box-shadow: inset 0.5px 0.5px 4px #676767;
@@ -761,6 +761,11 @@ footer a:hover {
   position: relative;
 }
 
+.mainForm .theForm input, .mainForm .theForm textarea {
+  padding-left: 0.3rem;
+  color: #232323;
+}
+
 .mainForm .theForm input:focus, .mainForm .theForm textarea:focus {
   background: #fffbfb;
 }
@@ -768,7 +773,7 @@ footer a:hover {
 .mainForm .theForm > textarea {
   resize: none;
   font-size: 16px;
-  padding: 0.4em;
+  padding: 0.5rem;
   font-family: 'Arial';
 }
 
@@ -943,25 +948,26 @@ footer a:hover {
   padding-bottom: 6rem;
 }
 
-.mobileQuestion {
+.Question {
   display: block;
   position: absolute;
   text-align: center;
   top: 30rem;
   left: 0;
-  background-color: #a6c3d5;
+  background-color: #5d9fc8;
   padding: 1rem 2rem;
   font-family: 'Arial';
   -webkit-animation: fadeIn 1.6s;
           animation: fadeIn 1.6s;
 }
 
-.mobileQuestion > h2 {
+.Question > h2 {
   font-size: 2.6rem;
+  color: white;
 }
 
-.mobileQuestion > p {
-  color: #363636;
+.Question > p {
+  color: #d0d0d0;
 }
 
 .bbSearch > .pictureBG {
@@ -1117,15 +1123,15 @@ footer a:hover {
     margin-bottom: 0rem;
   }
   .firstProjectList .projectLinks, .secondProjectList .projectLinks {
-    padding: 0.6em 0.7em;
+    padding: 0.6em 0.9em;
   }
-  .mobileQuestion {
+  .Question {
     display: none;
   }
 }
 
 @media only screen and (max-width: 70rem) {
-  .mobileQuestion {
+  .Question {
     display: none;
   }
 }
@@ -1322,18 +1328,33 @@ footer a:hover {
     width: 75%;
     height: 40%;
   }
-  .mobileQuestion {
+  .Question {
     display: block;
     position: static;
     background-color: transparent;
     text-align: center;
     font-family: 'Arial';
   }
-  .mobileQuestion > h2 {
+  .Question > h2 {
     font-size: 2.6rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #5e5e5e;
+    margin-bottom: 0.3rem;
+    padding: 2rem;
   }
-  .mobileQuestion > p {
+  .Question > p {
     color: #363636;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    -webkit-transform: translate(65px, -18px);
+            transform: translate(65px, -18px);
+    padding: 1rem;
+    background-color: white;
   }
   .mainForm {
     width: 287px;
