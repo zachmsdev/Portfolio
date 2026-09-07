@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="120"
+       height="120"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <circle
+       style="font-variation-settings:'opsz' 32;fill:#0000ff;stroke-width:1.002"
+       id="path1"
+       cx="59.344666"
+       cy="60.509708"
+       r="42.451458"
+       inkscape:label="BG" />
+    <text
+       xml:space="preserve"
+       style="font-size:43.2714px;font-family:System-ui;-inkscape-font-specification:'System-ui, @opsz=32';font-variation-settings:'opsz' 32;writing-mode:lr-tb;direction:ltr;fill:#cccccc;stroke-width:2.32274"
+       x="44.576187"
+       y="77.080627"
+       id="text1"
+       inkscape:label="Z"
+       transform="scale(1.0480929,0.9541139)"
+       inkscape:transform-center-x="-17.912621"
+       inkscape:transform-center-y="-1.3106796"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="44.576187"
+         y="77.080627"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.2714px;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cccccc;stroke-width:2.32274">Z</tspan></text>
+  </g>
+</svg>
