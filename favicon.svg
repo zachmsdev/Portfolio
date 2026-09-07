@@ -12,6 +12,7 @@
    inkscape:export-ydpi="96"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    sodipodi:docname="FAVICON.svg"
+   inkscape:dataloss="true"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +29,7 @@
      inkscape:document-units="px"
      inkscape:zoom="6.8666667"
      inkscape:cx="60"
-     inkscape:cy="59.708738"
+     inkscape:cy="65.53398"
      inkscape:window-width="1920"
      inkscape:window-height="1026"
      inkscape:window-x="0"
@@ -52,7 +53,7 @@
      id="layer1"
      style="display:inline">
     <ellipse
-       style="font-variation-settings:'opsz' 32;fill:#333333;stroke-width:1.3369"
+       style="font-variation-settings:'opsz' 32;fill:#e6e6e6;stroke-width:1.3369"
        id="path1"
        cx="59.781559"
        cy="60.509708"
