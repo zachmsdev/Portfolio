@@ -1,0 +1,68 @@
+
+// ~~ About Card SCSS
+
+.about-card {
+    display: none;
+    background-color: white;
+    padding: 0.8em;
+    color: #161515;
+    min-height: 29em;
+    width: 29em;
+    position: absolute;
+    border-radius: 1em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow-x: hidden;
+    @media only screen and (max-width: 490px) {
+        width: 90%;
+    }
+    .inner {
+        height: 100%;
+        border-radius: 1em;
+        border: 1px solid #e9e1e1;
+        p {
+            color: #403d3d;
+            line-height: 1.3;
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 22px;
+            color: #1e1d1d;
+            margin-bottom: 0.4em;
+        }
+        .about-header,
+        .about-text {
+            padding-left: 12px;
+            padding-right: 3em;
+        }
+        .about-text {
+            margin-bottom: 2em;
+            @media only screen and (max-width: 490px) {
+                padding-right: 2em;
+            }
+        }
+        .header-image {
+            position: relative;
+            background: #e3e3e3;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUs15YSpPAF1p4yixMHiKk7r4KBOHf8jzyz7twHRAoa4yFh4FJCMGwin0L&s=10');
+            width: 100%;
+            height: 13em;
+            border-top-right-radius: 1em;
+            border-top-left-radius: 1em;
+            background-position-y: -13em;
+            margin-bottom: 15px;
+            // Font awesome "exit" icon
+            .fa-xmark {
+                position: absolute;
+                top: 0.45em;
+                right: 0.75em;
+                color: #efeaea;
+                cursor: pointer;
+                &:hover {
+                    color: #ddd9d9;
+                }
+            }
+        }
+    }
+}
+
+

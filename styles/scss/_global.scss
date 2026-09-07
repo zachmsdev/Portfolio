@@ -1,0 +1,28 @@
+
+// ~~ Global SCSS
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root, body {
+    min-height: 100vh;
+    background-color: #ebebeb;  
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+button {
+    appearance: none;
+    border: none;
+    background: none;
+}
+
+
+

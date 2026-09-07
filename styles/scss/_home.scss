@@ -1,0 +1,147 @@
+
+// ~~ Homepage SCSS
+
+body.home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png"); 
+    // Desktop Navigation
+    header {
+        margin-bottom: 1.75em;
+        font-family: "Sen", sans-serif;
+        user-select: none;
+        a {
+            transition: color 0.3s linear;
+            &:not(:last-child) {
+                margin-right: 2em;
+            }
+            &:hover {
+                color: #818181;
+            }
+            &:active {
+                color: #ffffff;
+            }
+            &.active {
+                font-weight: 700;
+            }
+            color: #5c5c5c;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 500px) {
+            display: none;
+        }
+    }
+    // Mobile Navigation
+    .hamburger-icon {
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        top: 5px;
+        left: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        @media only screen and (min-width: 501px) {
+            display: none;
+        }
+        // Hamburger buns
+        div {
+            height: 3px;
+            width: 20px;
+            background: #2d312d;
+            border-radius: 1em;
+        }
+    }
+    .mobile-menu {
+        transform: translateY(-125px);
+        background: white;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.25rem;
+        width: 100%;
+        height: 7.5rem;
+        transition: transform 0.15s linear;
+        overflow-x: hidden;
+        @media only screen and (min-width: 501px) {
+            display: none;
+        }
+        // When active
+        &.showing {
+            transform: translateY(0px);
+        }
+        button {
+            font-size: 14px;
+            font-family: "Arial";
+            color: black;
+        }
+        a {
+            font-size: 14px;
+            font-family: "Arial";
+            color: black;
+        }
+        .fa-xmark {
+            position: absolute;
+            top: 10px;
+            left: 12px;
+        }
+    }
+    // Home Card
+    .home-card {
+        background-color: white;
+        padding: 2em;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 1em;
+        user-select: none;
+        .socials a {
+            color: #181717;
+        }
+        .profile-image {
+            width: 75px;
+            height: 75px;
+            border-radius: 100%;
+            margin-bottom: 0.35em;
+            user-select: none;
+        }
+        h2 {
+            margin-bottom: 0.2em;
+            color: #121212;
+            font-family: 'Times New Roman';
+            font-weight: 100;
+            span {
+                font-weight: 700;
+            }
+        }
+        p {
+            max-width: 12em;
+            color: #403d3d;
+            margin-bottom: 0.6em;
+            line-height: 1.3;
+        }
+        i {
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: color 0.2s, transform 0.15s;
+            &:hover {
+                color: #555555;
+            }
+            &:active {
+                transform: translateY(2.5px);
+            }
+            &.fa-linkedin {
+                margin-right: 0.15em;
+            }
+        }
+    }
+}
+
+
+
+
+

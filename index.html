@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="./styles/css/main.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
+        <script src="./dist/app.js" type="module"></script>
+    </head>
+    <body class="home">
+         <!-- Project Card -->
+        <article class="project-card">
+            <div class="inner">
+                <div class="header-image">
+                    <i class="fa-solid fa-xmark projects-exit"></i>
+                </div>
+                <h2>Projects</h2>
+                <div class="project-container">
+                    <a href="https://zachmsdev.github.io/responsiveLP/" class="project">
+                        <div class="left-side">
+                            <img alt="" src="./assets/images/interior-design-ui.png" class="project-image" />
+                        </div>
+                        <div class="right-side">
+                            <h4>Interior Design UI/UX</h4>
+                            <p>Responsive page built in HTML, SCSS, and JavaScript.</p>
+                        </div>
+                    </a>
+                    <a href="https://remix-store52.netlify.app/" class="project">
+                        <div class="left-side">
+                            <img alt="" src="./assets/images/remix-store.png" class="project-image" />
+                        </div>
+                        <div class="right-side">
+                            <h4>Shopping Cart</h4>
+                            <p>E-commerce store with shopping cart built in React.js and SCSS.</p>
+                        </div>
+                    </a>
+                    <a href="https://zachmsdev.github.io/Etch-a-Sketch/" class="project">
+                        <div class="left-side">
+                            <img alt="" src="./assets/images/etch-a-sketch-white.png" class="project-image" />
+                        </div>
+                        <div class="right-side">
+                            <h4>Etch A Sketch</h4>
+                            <p>Draw some pictures! Built with JavaScript and SCSS.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
+        <!-- About Card -->
+        <article class="about-card">
+            <div class="inner">
+                <div class="header-image">
+                    <i class="fa-solid fa-xmark about-exit"></i>
+                </div>
+                <h2 class="about-header">About Me</h2>
+                <p class="about-text">I’m a front-end developer specializing in building responsive web applications with HTML, SCSS, TypeScript, and other web technologies. I take pride in crafting clean user interfaces and delivering excellent user experiences. Outside of coding, you’ll usually find me hiking in the mountains, gaming, mountain biking, tinkering with Linux, or reading.</p>
+            </div>
+        </article>
+        <!-- Desktop Navigation -->
+        <header>
+            <a class="active">Home</a>
+            <a class="about-link">About</a>
+            <a class="projects-link">Projects</a>
+            <a target="_blank" href="./assets/images/Zach-Resume-Portfolio.pdf">Resume</a>
+            <a class="contact-link">Contact</a>
+        </header>
+        <!-- Mobile Navigation -->
+        <div class="hamburger-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="mobile-menu">
+            <i class="fa-solid fa-xmark"></i>
+            <button class="about">About</button>
+            <button class="projects">Projects</button>
+            <a target="_blank" href="./images/Zach-Resume-Portfolio.pdf">Resume</a>
+            <button class="contact">Contact</button>
+        </div>
+        <!-- Home Card -->
+        <article class="home-card">
+            <div class="profile-image-bg">
+                <img class="profile-image" src="./assets/images/profile-image.jpeg" alt="Profile Image" />
+            </div>
+            <h2><span>Hi</span>, I'm Zach</h2>
+            <p>Front-end developer based in Cumberland, MD</p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/zach-sneeringer-b5186b41/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/zachmsdev"><i class="fa-brands fa-square-github"></i></a>
+            </div>
+        </article>
+        <!-- Contact Card -->
+        <article class="contact-card">
+            <div class="inner">
+                <div class="header-image">
+                    <i class="fa-solid fa-xmark contact-exit"></i>
+                </div>
+                <h2 class="contact-header">Let's Get In Touch</h2>
+                <p class="contact-text">Or reach out directly to zachsneeringerdev@gmail.com</p>
+                <!-- Form -->
+                <form action="https://formspree.io/f/xvkopokd" method="POST">
+                    <label for="fullName">Name</label>
+                    <input id="fullName" placeholder="Enter your name.." required autocomplete="name" name="name" />
+                    <label for="userEmail">Email</label>
+                    <input id="userEmail" type="email" placeholder="Enter your email.." required autocomplete="email" name="email"/>
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Enter your message.." required name="message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </article>
+    </body>
+</html>
+
+
+
+

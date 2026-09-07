@@ -1,0 +1,451 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root, body {
+  min-height: 100vh;
+  background-color: #ebebeb;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+body.home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
+}
+body.home header {
+  margin-bottom: 1.75em;
+  font-family: "Sen", sans-serif;
+  user-select: none;
+}
+body.home header a {
+  transition: color 0.3s linear;
+}
+body.home header a:not(:last-child) {
+  margin-right: 2em;
+}
+body.home header a:hover {
+  color: #818181;
+}
+body.home header a:active {
+  color: #ffffff;
+}
+body.home header a.active {
+  font-weight: 700;
+}
+body.home header a {
+  color: #5c5c5c;
+  cursor: pointer;
+}
+@media only screen and (max-width: 500px) {
+  body.home header {
+    display: none;
+  }
+}
+body.home .hamburger-icon {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+@media only screen and (min-width: 501px) {
+  body.home .hamburger-icon {
+    display: none;
+  }
+}
+body.home .hamburger-icon div {
+  height: 3px;
+  width: 20px;
+  background: #2d312d;
+  border-radius: 1em;
+}
+body.home .mobile-menu {
+  transform: translateY(-125px);
+  background: white;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  height: 7.5rem;
+  transition: transform 0.15s linear;
+  overflow-x: hidden;
+}
+@media only screen and (min-width: 501px) {
+  body.home .mobile-menu {
+    display: none;
+  }
+}
+body.home .mobile-menu.showing {
+  transform: translateY(0px);
+}
+body.home .mobile-menu button {
+  font-size: 14px;
+  font-family: "Arial";
+  color: black;
+}
+body.home .mobile-menu a {
+  font-size: 14px;
+  font-family: "Arial";
+  color: black;
+}
+body.home .mobile-menu .fa-xmark {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+body.home .home-card {
+  background-color: white;
+  padding: 2em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 1em;
+  user-select: none;
+}
+body.home .home-card .socials a {
+  color: #181717;
+}
+body.home .home-card .profile-image {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  margin-bottom: 0.35em;
+  user-select: none;
+}
+body.home .home-card h2 {
+  margin-bottom: 0.2em;
+  color: #121212;
+  font-family: "Times New Roman";
+  font-weight: 100;
+}
+body.home .home-card h2 span {
+  font-weight: 700;
+}
+body.home .home-card p {
+  max-width: 12em;
+  color: #403d3d;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+}
+body.home .home-card i {
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.15s;
+}
+body.home .home-card i:hover {
+  color: #555555;
+}
+body.home .home-card i:active {
+  transform: translateY(2.5px);
+}
+body.home .home-card i.fa-linkedin {
+  margin-right: 0.15em;
+}
+
+.about-card {
+  display: none;
+  background-color: white;
+  padding: 0.8em;
+  color: #161515;
+  min-height: 29em;
+  width: 29em;
+  position: absolute;
+  border-radius: 1em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 490px) {
+  .about-card {
+    width: 90%;
+  }
+}
+.about-card .inner {
+  height: 100%;
+  border-radius: 1em;
+  border: 1px solid #e9e1e1;
+}
+.about-card .inner p {
+  color: #403d3d;
+  line-height: 1.3;
+}
+.about-card .inner h2 {
+  font-weight: bold;
+  font-size: 22px;
+  color: #1e1d1d;
+  margin-bottom: 0.4em;
+}
+.about-card .inner .about-header,
+.about-card .inner .about-text {
+  padding-left: 12px;
+  padding-right: 3em;
+}
+.about-card .inner .about-text {
+  margin-bottom: 2em;
+}
+@media only screen and (max-width: 490px) {
+  .about-card .inner .about-text {
+    padding-right: 2em;
+  }
+}
+.about-card .inner .header-image {
+  position: relative;
+  background: #e3e3e3;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUs15YSpPAF1p4yixMHiKk7r4KBOHf8jzyz7twHRAoa4yFh4FJCMGwin0L&s=10");
+  width: 100%;
+  height: 13em;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  background-position-y: -13em;
+  margin-bottom: 15px;
+}
+.about-card .inner .header-image .fa-xmark {
+  position: absolute;
+  top: 0.45em;
+  right: 0.75em;
+  color: #efeaea;
+  cursor: pointer;
+}
+.about-card .inner .header-image .fa-xmark:hover {
+  color: #ddd9d9;
+}
+
+.project-card {
+  display: none;
+  background-color: white;
+  padding: 0.8em;
+  color: #161515;
+  height: 28em;
+  width: 29em;
+  position: absolute;
+  border-radius: 1em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 478px) {
+  .project-card {
+    width: 90%;
+  }
+}
+.project-card .inner {
+  height: 100%;
+  border-radius: 1em;
+  border: 1px solid #e9e1e1;
+}
+.project-card .inner .header-image {
+  position: relative;
+  background-color: #8cc8ef;
+  width: 100%;
+  height: 13em;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  background-position-y: -13em;
+  margin-bottom: 17px;
+  height: 4em;
+  background-position: top;
+}
+.project-card .inner .header-image .fa-xmark {
+  position: absolute;
+  top: 0.45em;
+  right: 0.75em;
+  color: #efeaea;
+  cursor: pointer;
+}
+.project-card .inner .header-image .fa-xmark:hover {
+  color: #ede6e6;
+}
+.project-card h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #1e1d1d;
+  padding-left: 18px;
+  margin-bottom: 0.25em;
+}
+.project-card .project-container {
+  height: 18em;
+  display: flex;
+  flex-direction: column;
+}
+.project-card .project-container .project {
+  height: 6em;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+@media only screen and (max-width: 478px) {
+  .project-card .project-container .project {
+    gap: 0.5em;
+  }
+}
+.project-card .project-container .project:hover {
+  background: #f1f1f1;
+}
+.project-card .project-container .project:hover h4 {
+  color: black;
+}
+.project-card .project-container .project .left-side {
+  flex-basis: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 478px) {
+  .project-card .project-container .project .left-side {
+    padding-left: 18px;
+  }
+}
+.project-card .project-container .project .left-side img {
+  max-width: 100%;
+  min-width: 72px;
+  height: 62px;
+  width: 87px;
+}
+.project-card .project-container .project .right-side {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25em;
+  padding-right: 4em;
+}
+@media only screen and (max-width: 478px) {
+  .project-card .project-container .project .right-side {
+    padding-right: 5px;
+  }
+}
+.project-card .project-container .project h4 {
+  color: #1e1d1d;
+  margin-bottom: -2px;
+  transition: color 0.2s ease-in-out;
+}
+.project-card .project-container .project p {
+  color: #646464;
+  line-height: 1.25;
+}
+@media only screen and (max-width: 359px) {
+  .project-card .project-container .project p {
+    display: none;
+  }
+}
+
+.contact-card {
+  display: none;
+  background-color: white;
+  padding: 0.8em;
+  color: #161515;
+  height: 29em;
+  width: 29em;
+  position: absolute;
+  border-radius: 1em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 487px) {
+  .contact-card {
+    height: auto;
+    width: 90%;
+  }
+}
+.contact-card .inner {
+  height: 100%;
+  border-radius: 1em;
+  border: 1px solid #e9e1e1;
+}
+.contact-card .inner *:not(.header-image):not(label):not(input):not(textarea):not(button) {
+  padding-left: 12px;
+}
+.contact-card .header-image {
+  position: relative;
+  background: #e3e3e3;
+  background-color: teal;
+  width: 100%;
+  height: 3em;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  background-position-y: -13em;
+  margin-bottom: 17px;
+}
+.contact-card .header-image .fa-xmark {
+  position: absolute;
+  top: 0.45em;
+  right: 0.75em;
+  color: #efeaea;
+  cursor: pointer;
+}
+.contact-card .header-image .fa-xmark:hover {
+  color: #ddd9d9;
+}
+.contact-card h2 {
+  margin-bottom: 0.35em;
+  color: #161515;
+}
+.contact-card .contact-text {
+  color: #4b4949;
+  margin-bottom: 0.85em;
+}
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-card form input {
+  padding-left: 3px;
+  margin-bottom: 1em;
+  font-size: 15px;
+  padding: 0.35em;
+  width: 97%;
+  border: 1px solid lightgrey;
+}
+.contact-card form label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #292626;
+}
+.contact-card form textarea {
+  resize: none;
+  height: 6em;
+  padding: 0.35em;
+  font-size: 15px;
+  font-family: "Arial";
+  width: 97%;
+  margin-bottom: 1em;
+  border: 1px solid lightgrey;
+}
+.contact-card form button[type=submit] {
+  padding: 0.5em;
+  width: 97%;
+  border: none;
+  cursor: pointer;
+  background: teal;
+  color: #efeaea;
+}
+@media only screen and (max-width: 487px) {
+  .contact-card form button[type=submit] {
+    margin-bottom: 1.5em;
+  }
+}
+.contact-card form button[type=submit]:hover {
+  background: #037575;
+}
+
+/*# sourceMappingURL=main.css.map */

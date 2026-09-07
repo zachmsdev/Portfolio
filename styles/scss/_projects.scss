@@ -1,0 +1,114 @@
+
+// ~~ Project Card SCSS
+
+.project-card {
+    display: none;
+    background-color: white;
+    padding: 0.8em;
+    color: #161515;
+    height: 28em;
+    width: 29em;
+    position: absolute;
+    border-radius: 1em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow-x: hidden;
+    @media only screen and (max-width: 478px) {
+        width: 90%;
+    }
+    .inner {
+        height: 100%;
+        border-radius: 1em;
+        border: 1px solid #e9e1e1;
+        .header-image {
+            position: relative;
+            background-color: #8cc8ef;
+            width: 100%;
+            height: 13em;
+            border-top-right-radius: 1em;
+            border-top-left-radius: 1em;
+            background-position-y: -13em;
+            margin-bottom: 17px;
+            height: 4em;
+            background-position: top;
+            // Font awesome "exit" icon
+            .fa-xmark {
+                position: absolute;
+                top: 0.45em;
+                right: 0.75em;
+                color: #efeaea;
+                cursor: pointer;
+                &:hover {
+                    color: #ede6e6;
+                }
+            }
+        }
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 24px;
+        color: #1e1d1d;
+        padding-left: 18px;
+        margin-bottom: 0.25em;
+    }
+    //  Project container in the project card
+    .project-container {
+        height: 18em;
+        display: flex;
+        flex-direction: column;
+        .project {
+            height: 6em;
+            width: 100%;
+            display: flex;
+            cursor: pointer;
+            @media only screen and (max-width: 478px) {
+                gap: 0.5em;
+            }
+            &:hover {
+                background: #f1f1f1;
+            }
+            &:hover h4 {
+                color: black;
+            }
+            .left-side {
+                flex-basis: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media only screen and (max-width: 478px) {
+                    padding-left: 18px;
+                }
+                img {
+                    max-width: 100%;
+                    min-width: 72px;
+                    height: 62px;
+                    width: 87px;
+                }
+            }
+            .right-side {
+                flex-basis: 70%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 0.25em;
+                padding-right: 4em;
+                @media only screen and (max-width: 478px) {
+                    padding-right: 5px;
+                }
+            }
+            h4 {
+                color: #1e1d1d;
+                margin-bottom: -2px;
+                transition: color 0.2s ease-in-out;
+            }
+            p {
+                color: #646464;
+                line-height: 1.25;
+                @media only screen and (max-width: 359px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
