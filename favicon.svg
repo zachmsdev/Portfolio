@@ -62,7 +62,7 @@
        ry="55.558254" />
     <text
        xml:space="preserve"
-       style="font-size:67.3456px;font-family:System-ui;-inkscape-font-specification:'System-ui, @opsz=32';font-variation-settings:'opsz' 32;writing-mode:lr-tb;direction:ltr;fill:#cccccc;stroke-width:3.615"
+       style="font-size:67.3456px;font-family:System-ui;-inkscape-font-specification:'System-ui, @opsz=32';font-variation-settings:'opsz' 32;writing-mode:lr-tb;direction:ltr;fill:#b3b3b3;stroke-width:3.615"
        x="35.987404"
        y="87.196144"
        id="text1"
@@ -74,6 +74,6 @@
          id="tspan1"
          x="35.987404"
          y="87.196144"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:67.3456px;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cccccc;stroke-width:3.615">Z</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:67.3456px;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#b3b3b3;stroke-width:3.615">Z</tspan></text>
   </g>
 </svg>
