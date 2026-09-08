@@ -105,12 +105,12 @@ body.home .mobile-menu.showing {
 body.home .mobile-menu button {
   font-size: 14px;
   font-family: "Arial";
-  color: black;
+  color: #5c5c5c;
 }
 body.home .mobile-menu a {
   font-size: 14px;
   font-family: "Arial";
-  color: black;
+  color: #5c5c5c;
 }
 body.home .mobile-menu .fa-xmark {
   position: absolute;
