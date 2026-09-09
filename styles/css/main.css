@@ -202,6 +202,14 @@ body.home .home-card i.fa-linkedin {
   padding-left: 12px;
   padding-right: 3em;
 }
+.about-card .inner .about-header span {
+  margin-left: 0.275em;
+  vertical-align: text-bottom;
+}
+.about-card .inner .about-header span i {
+  color: #d9d8d8;
+  font-size: 1.25rem;
+}
 .about-card .inner .about-text {
   margin-bottom: 2em;
 }
