@@ -34,6 +34,16 @@
             padding-left: 12px;
             padding-right: 3em;
         }
+        .about-header {
+            span {
+                margin-left: 0.275em;
+                vertical-align: text-bottom;
+                i {
+                    color: #d9d8d8;
+                    font-size: 1.25rem;
+                }
+            }
+        }
         .about-text {
             margin-bottom: 2em;
             @media only screen and (max-width: 490px) {
