@@ -204,6 +204,7 @@ body.home .home-card i.fa-linkedin {
 }
 .about-card .inner .about-header span {
   margin-left: 0.275em;
+  vertical-align: text-bottom;
 }
 .about-card .inner .about-header span i {
   color: #d9d8d8;
@@ -226,7 +227,7 @@ body.home .home-card i.fa-linkedin {
   border-top-right-radius: 1em;
   border-top-left-radius: 1em;
   background-position-y: -13em;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 .about-card .inner .header-image .fa-xmark {
   position: absolute;

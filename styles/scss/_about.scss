@@ -37,6 +37,8 @@
         .about-header {
             span {
                 margin-left: 0.275em;
+                vertical-align: text-bottom;
+                // Header icon
                 i {
                     color: #d9d8d8;
                     font-size: 1.25rem;
@@ -58,7 +60,7 @@
             border-top-right-radius: 1em;
             border-top-left-radius: 1em;
             background-position-y: -13em;
-            margin-bottom: 15px;
+            margin-bottom: 13px;
             // Font awesome "exit" icon
             .fa-xmark {
                 position: absolute;
