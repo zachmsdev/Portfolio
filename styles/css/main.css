@@ -290,6 +290,13 @@ body.home .home-card i.fa-linkedin {
   padding-left: 18px;
   margin-bottom: 0.25em;
 }
+.project-card h2 span {
+  margin-left: 0.3em;
+}
+.project-card h2 span i {
+  color: #dfdede;
+  font-size: 1.05rem;
+}
 .project-card .project-container {
   height: 18em;
   display: flex;

@@ -49,6 +49,14 @@
         color: #1e1d1d;
         padding-left: 18px;
         margin-bottom: 0.25em;
+        // Header icon
+        span {
+            margin-left: 0.3em;
+            i {
+                color: #dfdede;
+                font-size: 1.05rem;
+            }
+        }
     }
     //  Project container in the project card
     .project-container {
