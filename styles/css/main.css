@@ -387,7 +387,7 @@ body.home .home-card i.fa-linkedin {
   border-radius: 1em;
   border: 1px solid #e9e1e1;
 }
-.contact-card .inner *:not(.header-image):not(label):not(input):not(textarea):not(button) {
+.contact-card .inner *:not(.header-image):not(label):not(input):not(textarea):not(button):not(span):not(i) {
   padding-left: 12px;
 }
 .contact-card .header-image {
@@ -414,6 +414,13 @@ body.home .home-card i.fa-linkedin {
 .contact-card h2 {
   margin-bottom: 0.35em;
   color: #161515;
+}
+.contact-card h2 span {
+  margin-left: 0.3em;
+}
+.contact-card h2 span i {
+  color: #bdbcbc;
+  font-size: 1.1rem;
 }
 .contact-card .contact-text {
   color: #4b4949;

@@ -20,7 +20,7 @@
         height: 100%;
         border-radius: 1em;
         border: 1px solid #e9e1e1;
-        *:not(.header-image):not(label):not(input):not(textarea):not(button) {
+        *:not(.header-image):not(label):not(input):not(textarea):not(button):not(span):not(i) {
             padding-left: 12px;
         }
     }
@@ -49,6 +49,14 @@
     h2 {
         margin-bottom: 0.35em;
         color: #161515;
+        // Header icon
+        span {
+            margin-left: 0.3em;
+            i {    
+                color: #bdbcbc;
+                font-size: 1.1rem;
+            }
+        }
     }
     .contact-text {
         color: #4b4949;
