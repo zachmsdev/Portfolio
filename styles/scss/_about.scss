@@ -27,7 +27,7 @@
             font-weight: bold;
             font-size: 22px;
             color: #1e1d1d;
-            margin-bottom: 0.4em;
+            margin-bottom: 0.35em;
         }
         .about-header,
         .about-text {
@@ -41,6 +41,9 @@
                 i {
                     color: #bdbcbc;
                     font-size: 1.05rem;
+                    @media only screen and (max-width: 500px) {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
