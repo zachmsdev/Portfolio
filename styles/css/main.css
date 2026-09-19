@@ -174,7 +174,7 @@ body.home .home-card i.fa-linkedin {
   width: 29em;
   position: absolute;
   border-radius: 1em;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   overflow-x: hidden;
 }
 @media only screen and (max-width: 490px) {
@@ -258,7 +258,7 @@ body.home .home-card i.fa-linkedin {
   width: 29em;
   position: absolute;
   border-radius: 1em;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   overflow-x: hidden;
 }
 @media only screen and (max-width: 478px) {
@@ -383,7 +383,7 @@ body.home .home-card i.fa-linkedin {
   width: 29em;
   position: absolute;
   border-radius: 1em;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   overflow-x: hidden;
 }
 @media only screen and (max-width: 487px) {
