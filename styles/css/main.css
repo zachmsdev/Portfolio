@@ -188,7 +188,7 @@ body.home .home-card i.fa-linkedin {
   border: 1px solid #e9e1e1;
 }
 .about-card .inner p {
-  color: #403d3d;
+  color: #4b4949;
   line-height: 1.3;
 }
 .about-card .inner h2 {
@@ -201,6 +201,11 @@ body.home .home-card i.fa-linkedin {
 .about-card .inner .about-text {
   padding-left: 12px;
   padding-right: 3em;
+}
+@media only screen and (max-width: 490px) {
+  .about-card .inner .about-header {
+    font-size: 21px;
+  }
 }
 .about-card .inner .about-header span {
   margin-left: 0.3em;
