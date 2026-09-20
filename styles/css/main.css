@@ -135,11 +135,21 @@ body.home .home-card .profile-image {
   margin-bottom: 0.35em;
   user-select: none;
 }
+@media only screen and (max-width: 500px) {
+  body.home .home-card .profile-image {
+    margin-bottom: 0.25em;
+  }
+}
 body.home .home-card h2 {
   margin-bottom: 0.2em;
   color: #121212;
   font-family: "Times New Roman";
   font-weight: 100;
+}
+@media only screen and (max-width: 500px) {
+  body.home .home-card h2 {
+    margin-bottom: 0.15em;
+  }
 }
 body.home .home-card h2 span {
   font-weight: 700;
@@ -149,6 +159,11 @@ body.home .home-card p {
   color: #403d3d;
   margin-bottom: 0.55em;
   line-height: 1.3;
+}
+@media only screen and (max-width: 500px) {
+  body.home .home-card p {
+    margin-bottom: 0.45em;
+  }
 }
 body.home .home-card i {
   font-size: 1.5em;
