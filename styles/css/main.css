@@ -138,6 +138,8 @@ body.home .home-card .profile-image {
 @media only screen and (max-width: 500px) {
   body.home .home-card .profile-image {
     margin-bottom: 0.25em;
+    width: 65px;
+    height: 65px;
   }
 }
 body.home .home-card h2 {

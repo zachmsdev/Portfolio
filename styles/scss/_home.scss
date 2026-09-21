@@ -111,6 +111,8 @@ body.home {
             user-select: none;
             @media only screen and (max-width: 500px) {
                 margin-bottom: 0.25em;
+                width: 65px;
+                height: 65px;
             }
         }
         h2 {
