@@ -317,12 +317,22 @@ body.home .home-card i.fa-linkedin {
   padding-left: 18px;
   margin-bottom: 0.25em;
 }
+@media only screen and (max-width: 500px) {
+  .project-card h2 {
+    font-size: 20px;
+  }
+}
 .project-card h2 span {
   margin-left: 0.3em;
 }
 .project-card h2 span i {
   color: #bdbcbc;
   font-size: 1.05rem;
+}
+@media only screen and (max-width: 500px) {
+  .project-card h2 span i {
+    font-size: 0.9rem;
+  }
 }
 .project-card .project-container {
   height: 18em;
@@ -381,9 +391,19 @@ body.home .home-card i.fa-linkedin {
   margin-bottom: -2px;
   transition: color 0.2s ease-in-out;
 }
+@media only screen and (max-width: 500px) {
+  .project-card .project-container .project h4 {
+    margin-bottom: -4px;
+  }
+}
 .project-card .project-container .project p {
   color: #646464;
   line-height: 1.25;
+}
+@media only screen and (max-width: 500px) {
+  .project-card .project-container .project p {
+    font-size: 15px;
+  }
 }
 @media only screen and (max-width: 359px) {
   .project-card .project-container .project p {

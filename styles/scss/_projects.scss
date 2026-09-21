@@ -49,12 +49,18 @@
         color: #1e1d1d;
         padding-left: 18px;
         margin-bottom: 0.25em;
+        @media only screen and (max-width: 500px) {
+            font-size: 20px;
+        }
         // Header icon
         span {
             margin-left: 0.3em;
             i {
                 color: #bdbcbc;
                 font-size: 1.05rem;
+                @media only screen and (max-width: 500px) {
+                    font-size: 0.9rem;
+                }
             }
         }
     }
@@ -107,10 +113,16 @@
                 color: #1e1d1d;
                 margin-bottom: -2px;
                 transition: color 0.2s ease-in-out;
+                @media only screen and (max-width: 500px) {
+                    margin-bottom: -4px;
+                }
             }
             p {
                 color: #646464;
                 line-height: 1.25;
+                @media only screen and (max-width: 500px) {
+                    font-size: 15px;
+                }
                 @media only screen and (max-width: 359px) {
                     display: none;
                 }
