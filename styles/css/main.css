@@ -132,7 +132,7 @@ body.home .home-card .profile-image {
   width: 70px;
   height: 70px;
   border-radius: 100%;
-  margin-bottom: 0.35em;
+  margin-bottom: 0.25em;
   user-select: none;
   border: 1px solid #e3e3e3;
 }
