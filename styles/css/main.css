@@ -319,7 +319,7 @@ body.home .home-card i.fa-linkedin {
 }
 @media only screen and (max-width: 500px) {
   .project-card h2 {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .project-card h2 span {
@@ -462,6 +462,11 @@ body.home .home-card i.fa-linkedin {
   margin-bottom: 0.35em;
   color: #161515;
 }
+@media only screen and (max-width: 500px) {
+  .contact-card h2 {
+    font-size: 21px;
+  }
+}
 .contact-card h2 span {
   margin-left: 0.3em;
 }
@@ -469,15 +474,26 @@ body.home .home-card i.fa-linkedin {
   color: #bdbcbc;
   font-size: 1.1rem;
 }
+@media only screen and (max-width: 500px) {
+  .contact-card h2 span i {
+    font-size: 0.9rem;
+  }
+}
 .contact-card .contact-text {
-  color: #4b4949;
+  color: #646464;
   margin-bottom: 0.85em;
+}
+@media only screen and (max-width: 500px) {
+  .contact-card .contact-text {
+    font-size: 15px;
+  }
 }
 .contact-card form {
   display: flex;
   flex-direction: column;
 }
 .contact-card form input {
+  font-family: "Arial";
   padding-left: 3px;
   margin-bottom: 1em;
   font-size: 15px;

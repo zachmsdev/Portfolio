@@ -49,23 +49,33 @@
     h2 {
         margin-bottom: 0.35em;
         color: #161515;
+        @media only screen and (max-width: 500px) {
+            font-size: 21px;
+        }
         // Header icon
         span {
             margin-left: 0.3em;
             i {    
                 color: #bdbcbc;
                 font-size: 1.1rem;
+                @media only screen and (max-width: 500px) {
+                    font-size: 0.9rem;
+                }
             }
         }
     }
     .contact-text {
-        color: #4b4949;
+        color: #646464;
         margin-bottom: 0.85em;
+        @media only screen and (max-width: 500px) {
+            font-size: 15px;
+        }
     }
     form {
         display: flex;
         flex-direction: column;
         input {
+            font-family: "Arial";
             padding-left: 3px;
             margin-bottom: 1em;
             font-size: 15px;
