@@ -138,7 +138,7 @@ body.home .home-card .profile-image {
 }
 @media only screen and (max-width: 500px) {
   body.home .home-card .profile-image {
-    margin-bottom: 0.25em;
+    margin-bottom: 0.15em;
     width: 65px;
     height: 65px;
   }
