@@ -152,6 +152,7 @@ body.home .home-card h2 {
 @media only screen and (max-width: 500px) {
   body.home .home-card h2 {
     margin-bottom: 0.1em;
+    font-size: 22px;
   }
 }
 body.home .home-card h2 span {
@@ -166,12 +167,18 @@ body.home .home-card p {
 @media only screen and (max-width: 500px) {
   body.home .home-card p {
     margin-bottom: 0.45em;
+    font-size: 15px;
   }
 }
 body.home .home-card i {
   font-size: 1.5em;
   cursor: pointer;
   transition: color 0.2s, transform 0.15s;
+}
+@media only screen and (max-width: 500px) {
+  body.home .home-card i {
+    font-size: 1.35em;
+  }
 }
 body.home .home-card i:hover {
   color: #555555;
