@@ -475,6 +475,11 @@ body.home .home-card i.fa-linkedin {
   background-position-y: -13em;
   margin-bottom: 17px;
 }
+@media only screen and (max-width: 500px) {
+  .contact-card .header-image {
+    margin-bottom: 13px;
+  }
+}
 .contact-card .header-image .fa-xmark {
   position: absolute;
   top: 0.45em;

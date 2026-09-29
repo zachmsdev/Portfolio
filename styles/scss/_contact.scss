@@ -34,6 +34,9 @@
         border-top-left-radius: 1em;
         background-position-y: -13em;
         margin-bottom: 17px;
+        @media only screen and (max-width: 500px) {
+            margin-bottom: 13px;
+        }
         // Font awesome "exit" icon
         .fa-xmark {
             position: absolute;
