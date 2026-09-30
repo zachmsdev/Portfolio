@@ -34,7 +34,7 @@
         border-top-left-radius: 1em;
         background-position-y: -13em;
         margin-bottom: 17px;
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 487px) {
             margin-bottom: 13px;
         }
         // Font awesome "exit" icon
@@ -52,7 +52,7 @@
     h2 {
         margin-bottom: 0.35em;
         color: #1e1d1d;
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 487px) {
             font-size: 21px;
             margin-bottom: 0.25em;
         }
@@ -62,7 +62,7 @@
             i {    
                 color: #bdbcbc;
                 font-size: 1.1rem;
-                @media only screen and (max-width: 500px) {
+                @media only screen and (max-width: 487px) {
                     font-size: 0.9rem;
                 }
             }
@@ -71,7 +71,7 @@
     .contact-text {
         color: #646464;
         margin-bottom: 0.85em;
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 487px) {
             font-size: 15px;
             margin-bottom: 0.65em;
             line-height: 1.2;
