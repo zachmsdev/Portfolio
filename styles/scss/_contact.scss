@@ -51,9 +51,10 @@
     }
     h2 {
         margin-bottom: 0.35em;
-        color: #161515;
+        color: #1e1d1d;
         @media only screen and (max-width: 500px) {
             font-size: 21px;
+            margin-bottom: 0.25em;
         }
         // Header icon
         span {
@@ -72,6 +73,8 @@
         margin-bottom: 0.85em;
         @media only screen and (max-width: 500px) {
             font-size: 15px;
+            margin-bottom: 0.65em;
+            line-height: 1.2;
         }
     }
     form {
