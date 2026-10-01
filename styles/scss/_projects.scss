@@ -12,11 +12,9 @@
     border-radius: 1em;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     overflow-x: hidden;
-    @media only screen and (max-width: 500px) {
-        height: 26.8em;
-    }
     @media only screen and (max-width: 478px) {
         width: 90%;
+        height: 26.8em;
     }
     .inner {
         height: 100%;
@@ -33,7 +31,7 @@
             margin-bottom: 17px;
             height: 4em;
             background-position: top;
-            @media only screen and (max-width: 500px) {
+            @media only screen and (max-width: 478px) {
                 margin-bottom: 14px;
             }
             // Font awesome "exit" icon
@@ -55,7 +53,7 @@
         color: #1e1d1d;
         padding-left: 18px;
         margin-bottom: 0.25em;
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 478px) {
             font-size: 21px;
             margin-bottom: 0.1em;
         }
@@ -65,7 +63,7 @@
             i {
                 color: #bdbcbc;
                 font-size: 1.05rem;
-                @media only screen and (max-width: 500px) {
+                @media only screen and (max-width: 478px) {
                     font-size: 0.9rem;
                 }
             }
@@ -120,14 +118,14 @@
                 color: #1e1d1d;
                 margin-bottom: -2px;
                 transition: color 0.2s ease-in-out;
-                @media only screen and (max-width: 500px) {
+                @media only screen and (max-width: 478px) {
                     margin-bottom: -4px;
                 }
             }
             p {
                 color: #646464;
                 line-height: 1.25;
-                @media only screen and (max-width: 500px) {
+                @media only screen and (max-width: 478px) {
                     font-size: 15px;
                 }
                 @media only screen and (max-width: 359px) {
