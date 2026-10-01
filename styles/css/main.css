@@ -130,18 +130,17 @@ body.home .home-card .socials a {
   color: #181717;
 }
 body.home .home-card .profile-image {
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   border-radius: 100%;
   margin-bottom: 0.25em;
   user-select: none;
-  border: 1px solid #f1f1f1;
 }
 @media only screen and (max-width: 500px) {
   body.home .home-card .profile-image {
     margin-bottom: 0.15em;
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
   }
 }
 body.home .home-card h2 {
