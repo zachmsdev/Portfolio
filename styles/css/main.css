@@ -433,6 +433,19 @@ body.home .home-card i.fa-linkedin {
     display: none;
   }
 }
+@media only screen and (max-width: 380px) {
+  .project-card .project-container .project p .desktop-text {
+    display: none;
+  }
+}
+.project-card .project-container .project p .mobile-text {
+  display: none;
+}
+@media only screen and (max-width: 380px) {
+  .project-card .project-container .project p .mobile-text {
+    display: initial;
+  }
+}
 
 .contact-card {
   display: none;

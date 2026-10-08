@@ -114,6 +114,7 @@
                     padding-right: 1em;
                 }
             }
+            // Project header
             h4 {
                 color: #1e1d1d;
                 margin-bottom: -2px;
@@ -122,6 +123,7 @@
                     margin-bottom: -4px;
                 }
             }
+            // Project description
             p {
                 color: #646464;
                 line-height: 1.25;
@@ -130,6 +132,17 @@
                 }
                 @media only screen and (max-width: 359px) {
                     display: none;
+                }
+                .desktop-text {
+                    @media only screen and (max-width: 380px) {
+                        display: none;
+                    }
+                }
+                .mobile-text {
+                    display: none;
+                    @media only screen and (max-width: 380px) {
+                        display: initial;
+                    }
                 }
             }
         }
