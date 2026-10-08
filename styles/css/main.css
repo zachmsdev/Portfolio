@@ -35,7 +35,7 @@ body.home header {
   user-select: none;
 }
 body.home header a {
-  transition: color 0.3s linear;
+  transition: color 0.2s linear;
 }
 body.home header a:not(:last-child) {
   margin-right: 2em;
@@ -44,7 +44,7 @@ body.home header a:hover {
   color: #818181;
 }
 body.home header a:active {
-  color: #ffffff;
+  color: #c5c5c5;
 }
 body.home header a.active {
   font-weight: 700;
