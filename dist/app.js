@@ -1,15 +1,18 @@
 // Portfolio TS
 const app = () => {
-    // Navigation DOM Elements
+    // DOM Elements
     // --- Desktop
     const aboutLink = document.querySelector('.about-link');
     const projectsLink = document.querySelector('.projects-link');
     const contactLink = document.querySelector('.contact-link');
+    const screen = document.querySelector('.screen');
     // --- Mobile
     const burgerIcon = document.querySelector('.hamburger-icon');
     const aboutLinkMobile = document.querySelector('.mobile-menu .about');
     const projectsLinkMobile = document.querySelector('.mobile-menu .projects');
     const contactLinkMobile = document.querySelector('.mobile-menu .contact');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuExit = document.querySelector('.mobile-menu .fa-xmark');
     // -- array of all links in mobile menu
     const allMobileLinks = [...document.querySelectorAll('.mobile-menu *:not(.fa-xmark)')];
     // Card DOM Elements
@@ -19,8 +22,6 @@ const app = () => {
     const projectsExit = document.querySelector('.projects-exit');
     const contactCard = document.querySelector('.contact-card');
     const contactExit = document.querySelector('.contact-exit');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const mobileMenuExit = document.querySelector('.mobile-menu .fa-xmark');
     // About Card Events
     aboutLink.addEventListener('click', (e) => {
         setTimeout(() => {
@@ -69,6 +70,15 @@ const app = () => {
         link.addEventListener('click', (e) => {
             mobileMenu.classList.remove('showing');
         });
+    });
+    // Hide loading screen
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            screen.classList.add('hide');
+            screen.addEventListener('transitionend', () => {
+                screen.remove();
+            });
+        }, 500);
     });
 };
 app();

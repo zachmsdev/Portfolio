@@ -3,11 +3,12 @@
 
 const app = (): void => {
 
-    // Navigation DOM Elements
+    // DOM Elements
     // --- Desktop
     const aboutLink = document.querySelector<HTMLElement>('.about-link')!;
     const projectsLink = document.querySelector<HTMLElement>('.projects-link')!;
     const contactLink = document.querySelector<HTMLElement>('.contact-link')!;
+    const screen = document.querySelector<HTMLElement>('.screen')!;
     // --- Mobile
     const burgerIcon = document.querySelector<HTMLElement>('.hamburger-icon')!;
     const aboutLinkMobile = document.querySelector<HTMLElement>('.mobile-menu .about')!;
@@ -77,6 +78,15 @@ const app = (): void => {
         link.addEventListener('click', (e: Event) => {
             mobileMenu.classList.remove('showing');
         });
+    });
+    // Hide loading screen
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            screen.classList.add('hide');
+            screen.addEventListener('transitionend', () => {
+                screen.remove();
+            })
+        }, 500);
     });
 
 }
