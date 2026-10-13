@@ -3,10 +3,11 @@
 
 .project-card {
     display: none;
+    font-family: 'Inter', sans-serif;
     background-color: white;
     padding: 0.8em;
     color: #161515;
-    height: 28em;
+    height: 27em;
     width: 29em;
     position: absolute;
     border-radius: 1em;
@@ -49,12 +50,12 @@
     }
     h2 {
         font-weight: bold;
-        font-size: 24px;
+        font-size: 20px;
         color: #1e1d1d;
         padding-left: 18px;
         margin-bottom: 0.25em;
         @media only screen and (max-width: 478px) {
-            font-size: 21px;
+            font-size: 18px;
             margin-bottom: 0.1em;
         }
         // Header icon
@@ -117,16 +118,19 @@
             // Project header
             h4 {
                 color: #1e1d1d;
-                margin-bottom: -2px;
+                margin-bottom: -3px;
                 transition: color 0.2s ease-in-out;
+                font-weight: 700;
                 @media only screen and (max-width: 478px) {
                     margin-bottom: -4px;
+                    font-size: 15px;
                 }
             }
             // Project description
             p {
                 color: #646464;
                 line-height: 1.25;
+                font-size: 15px;
                 @media only screen and (max-width: 478px) {
                     font-size: 15px;
                 }
@@ -134,13 +138,13 @@
                     display: none;
                 }
                 .desktop-text {
-                    @media only screen and (max-width: 380px) {
+                    @media only screen and (max-width: 437px) {
                         display: none;
                     }
                 }
                 .mobile-text {
                     display: none;
-                    @media only screen and (max-width: 380px) {
+                    @media only screen and (max-width: 437px) {
                         display: initial;
                     }
                 }
