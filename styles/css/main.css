@@ -373,11 +373,21 @@ body.home .home-card i.fa-linkedin {
 .project-card h2 span i {
   color: #c7c7c7;
   font-size: 1.05rem;
+  transition: color 0.2s linear;
 }
 @media only screen and (max-width: 478px) {
   .project-card h2 span i {
     font-size: 0.9rem;
   }
+}
+.project-card:has(.project-1:hover) h2 span i {
+  color: #afddff;
+}
+.project-card:has(.project-2:hover) h2 span i {
+  color: #afffb6;
+}
+.project-card:has(.project-3:hover) h2 span i {
+  color: #ffafaf;
 }
 .project-card .project-container {
   height: 18em;

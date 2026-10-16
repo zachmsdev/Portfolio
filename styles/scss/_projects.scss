@@ -64,10 +64,27 @@
             i {
                 color: #c7c7c7;
                 font-size: 1.05rem;
+                transition: color 0.2s linear;
                 @media only screen and (max-width: 478px) {
                     font-size: 0.9rem;
                 }
             }
+        }
+    }
+    // Update header icon color when hovering projects
+    &:has(.project-1:hover) {
+        h2 span i {
+            color: #afddff;
+        }
+    }
+    &:has(.project-2:hover) {
+        h2 span i {
+            color: #afffb6;
+        }
+    }
+    &:has(.project-3:hover) {
+        h2 span i {
+            color: #ffafaf;
         }
     }
     //  Project container in the project card
