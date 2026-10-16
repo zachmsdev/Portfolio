@@ -50,7 +50,8 @@ body.home header {
   user-select: none;
 }
 body.home header a {
-  transition: color 0.2s linear;
+  display: inline-block;
+  transition: color 0.2s linear, transform 0.1s linear;
 }
 body.home header a:not(:last-child) {
   margin-right: 2em;
@@ -60,6 +61,7 @@ body.home header a:hover {
 }
 body.home header a:active {
   color: #c5c5c5;
+  transform: scale(1.1);
 }
 body.home header a.active {
   font-weight: 700;

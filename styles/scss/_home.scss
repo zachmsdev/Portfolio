@@ -29,7 +29,8 @@ body.home {
         font-family: "Sen", sans-serif;
         user-select: none;
         a {
-            transition: color 0.2s linear;
+            display: inline-block;
+            transition: color 0.2s linear, transform 0.1s linear;
             &:not(:last-child) {
                 margin-right: 2em;
             }
@@ -38,6 +39,7 @@ body.home {
             }
             &:active {
                 color: #c5c5c5;
+                transform: scale(1.1);
             }
             &.active {
                 font-weight: 700;
