@@ -23,11 +23,32 @@ body.home {
            transform: translateY(100vh);
        }
     }
+    // Cloud
+    img[src="/assets/images/cloud.svg"] {
+        position: absolute;
+        width: 28em;
+        z-index: 1;
+        top: 40%;
+        animation: cloud 3s ease-in-out alternate infinite;
+        @media only screen and (max-width: 500px) {
+            top: 40%;
+            width: 24em;
+        }
+    }
+    @keyframes cloud {
+        from {
+            transform: translateY(0em);
+        }
+        to {
+            transform: translateY(0.5em);
+        }
+    }
     // Desktop Navigation
     header {
         margin-bottom: 1.75em;
         font-family: "Sen", sans-serif;
         user-select: none;
+        z-index: 2;
         a {
             display: inline-block;
             transition: color 0.2s linear, transform 0.1s linear;
@@ -118,6 +139,7 @@ body.home {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-radius: 1em;
         user-select: none;
+        z-index: 2;
         .socials a {
             color: #181717;
         }
@@ -128,7 +150,7 @@ body.home {
             margin-bottom: 0.2em;
             user-select: none;
             @media only screen and (max-width: 500px) {
-                margin-bottom: 0.17em;
+                margin-bottom: 0.11em;
                 width: 60px;
                 height: 60px;
             }
@@ -141,7 +163,7 @@ body.home {
             font-size: 21px;
             @media only screen and (max-width: 500px) {
                 margin-bottom: 0.1em;
-                font-size: 21px;
+                font-size: 20px;
             }
             span {
                 font-weight: 700;

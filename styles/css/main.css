@@ -44,10 +44,32 @@ body.home .screen {
 body.home .screen.hide {
   transform: translateY(100vh);
 }
+body.home img[src="/assets/images/cloud.svg"] {
+  position: absolute;
+  width: 28em;
+  z-index: 1;
+  top: 40%;
+  animation: cloud 3s ease-in-out alternate infinite;
+}
+@media only screen and (max-width: 500px) {
+  body.home img[src="/assets/images/cloud.svg"] {
+    top: 40%;
+    width: 24em;
+  }
+}
+@keyframes cloud {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(0.5em);
+  }
+}
 body.home header {
   margin-bottom: 1.75em;
   font-family: "Sen", sans-serif;
   user-select: none;
+  z-index: 2;
 }
 body.home header a {
   display: inline-block;
@@ -142,6 +164,7 @@ body.home .home-card {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 1em;
   user-select: none;
+  z-index: 2;
 }
 body.home .home-card .socials a {
   color: #181717;
@@ -155,7 +178,7 @@ body.home .home-card .profile-image {
 }
 @media only screen and (max-width: 500px) {
   body.home .home-card .profile-image {
-    margin-bottom: 0.17em;
+    margin-bottom: 0.11em;
     width: 60px;
     height: 60px;
   }
@@ -170,7 +193,7 @@ body.home .home-card h2 {
 @media only screen and (max-width: 500px) {
   body.home .home-card h2 {
     margin-bottom: 0.1em;
-    font-size: 21px;
+    font-size: 20px;
   }
 }
 body.home .home-card h2 span {
@@ -214,6 +237,7 @@ body.home .home-card i.fa-linkedin {
 .about-card {
   display: none;
   background-color: white;
+  z-index: 3;
   padding: 0.8em;
   color: #161515;
   min-height: 29em;
@@ -305,6 +329,7 @@ body.home .home-card i.fa-linkedin {
 
 .project-card {
   display: none;
+  z-index: 3;
   font-family: "Inter", sans-serif;
   background-color: white;
   padding: 0.8em;
@@ -484,6 +509,7 @@ body.home .home-card i.fa-linkedin {
 
 .contact-card {
   display: none;
+  z-index: 3;
   font-family: "Inter", sans-serif;
   background-color: white;
   padding: 0.8em;
