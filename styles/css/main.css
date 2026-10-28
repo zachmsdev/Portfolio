@@ -49,6 +49,7 @@ body.home img[src="/assets/images/cloud.svg"] {
   width: 28em;
   z-index: 1;
   top: 40%;
+  user-select: none;
   animation: cloud 3s ease-in-out alternate infinite;
 }
 @media only screen and (max-width: 500px) {
