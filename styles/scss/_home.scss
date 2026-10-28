@@ -51,7 +51,7 @@ body.home {
         z-index: 2;
         a {
             display: inline-block;
-            transition: color 0.2s linear, transform 0.1s linear;
+            transition: color 0.2s linear, transform 0.1s ease-in;
             &:not(:last-child) {
                 margin-right: 2em;
             }
